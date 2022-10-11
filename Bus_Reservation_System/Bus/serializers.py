@@ -1,6 +1,6 @@
 from pyexpat import model
 from rest_framework import serializers
-from Bus.models import BusList, Reservation, Price,User
+from Bus.models import BusList, Reservation,User
 
 
 class BusSerializer(serializers.ModelSerializer):
@@ -28,10 +28,10 @@ class BookingSerializer(serializers.ModelSerializer):
         model=Reservation
         fields=["bus","user","current_date","reservation_date","status"]
 
-    def create(self,validated_data):
-        # user=self.context.get("user")
-        # bus=self.context.get("bus")
-        return Reservation.objects.create(**validated_data)
+    # def create(self,validated_data):
+    #     # user=self.context.get("user")
+    #     # bus=self.context.get("bus")
+    #     return Reservation.objects.create(**validated_data)
 
 
 class UserLoginSerializer(serializers.ModelSerializer):
@@ -44,7 +44,7 @@ class UserLoginSerializer(serializers.ModelSerializer):
 
 
 
-class PriceSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Price
-        fields = "__all__"
+# class PriceSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Price
+#         fields = "__all__"

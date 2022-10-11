@@ -5,8 +5,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from Bus import serializers
-from Bus.models import BusList,Reservation,Price
-from Bus.serializers import BusSerializer,UserRegistrationSerializer,BookingSerializer,PriceSerializer,UserLoginSerializer
+from Bus.models import BusList,Reservation
+from Bus.serializers import BusSerializer,UserRegistrationSerializer,BookingSerializer,UserLoginSerializer
 from rest_framework import permissions, authentication
 from django.contrib.auth import authenticate
 
@@ -31,17 +31,17 @@ class UserRegistrationView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-class PriceView(viewsets.ModelViewSet):
-    serializer_class = PriceSerializer
-    queryset = Price.objects.all()
-    model = Price
-    authentication_classes = [authentication.TokenAuthentication]
-    permission_classes = [permissions.IsAuthenticated]
+# class PriceView(viewsets.ModelViewSet):
+#     serializer_class = PriceSerializer
+#     queryset = Price.objects.all()
+#     model = Price
+#     authentication_classes = [authentication.TokenAuthentication]
+#     permission_classes = [permissions.IsAuthenticated]
 
 
 class BookingView(viewsets.ModelViewSet):
     serializer_class = BookingSerializer
-    queryset = Reservation.objects.prefetch_related('buslist_set').all()
+    queryset = Reservation.objects.all()
     model = Reservation
     
 

@@ -64,6 +64,7 @@ class BusList(models.Model):
     bus_name = models.CharField(max_length=100)
     from_place = models.CharField(max_length=100)
     to = models.CharField(max_length=100)
+    price = models.PositiveIntegerField()
 
     # def __str__(self):
     #     return self.bus_name
@@ -77,9 +78,9 @@ class Reservation(models.Model):
     status = models.BooleanField(default=False)
     
 
-class Price(models.Model):
-    bus = models.ForeignKey(BusList,on_delete=models.CASCADE)
-    price = models.PositiveIntegerField()
+# class Price(models.Model):
+#     bus = models.ForeignKey(BusList,on_delete=models.CASCADE)
+#     price = models.PositiveIntegerField()
 
-    class Meta:
-         unique_together=('bus','price')
+#     class Meta:
+#          unique_together=('bus','price')
