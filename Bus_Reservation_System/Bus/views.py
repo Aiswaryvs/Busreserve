@@ -31,21 +31,6 @@ class UserRegistrationView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-# class PriceView(viewsets.ModelViewSet):
-#     serializer_class = PriceSerializer
-#     queryset = Price.objects.all()
-#     model = Price
-#     authentication_classes = [authentication.TokenAuthentication]
-#     permission_classes = [permissions.IsAuthenticated]
-
-
-class BookingView(viewsets.ModelViewSet):
-    serializer_class = BookingSerializer
-    queryset = Reservation.objects.all()
-    model = Reservation
-
-    
-    
 
 class UserLoginView(APIView):
      def post(self,request,format=None):
@@ -59,4 +44,32 @@ class UserLoginView(APIView):
                 status=status.HTTP_200_OK)
             else:
                 return Response(serializer.errors)
+
+
+
+
+class BookingView(viewsets.ModelViewSet):
+    serializer_class = BookingSerializer
+    queryset = Reservation.objects.all()
+    model = Reservation
+    authentication_classes = [authentication.TokenAuthentication]
+    permission_classes = [permissions.IsAuthenticated]
+
+
+
+
+# class PriceView(viewsets.ModelViewSet):
+#     serializer_class = PriceSerializer
+#     queryset = Price.objects.all()
+#     model = Price
+#     authentication_classes = [authentication.TokenAuthentication]
+#     permission_classes = [permissions.IsAuthenticated]
+
+
+
+    
+
+    
+    
+
 
