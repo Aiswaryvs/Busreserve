@@ -75,7 +75,11 @@ class Reservation(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE)
     current_date = models.DateTimeField(auto_now_add=True)
     reservation_date = models.DateTimeField()
-    status = models.BooleanField(default=False)
+    booking_status = (
+        ('booked','booked'),
+        ('cancel', 'cancel') )
+    status = models.CharField(choices=booking_status, default="booked", max_length=20)
+    
     
 
 # class Price(models.Model):

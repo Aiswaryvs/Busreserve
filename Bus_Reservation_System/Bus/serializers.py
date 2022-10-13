@@ -1,6 +1,6 @@
 from pyexpat import model
 from rest_framework import serializers
-from Bus.models import BusList, Reservation,User
+from Bus.models import BusList, Reservation, User
 
 
 class BusSerializer(serializers.ModelSerializer):

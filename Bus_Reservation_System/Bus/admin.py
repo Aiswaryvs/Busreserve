@@ -1,5 +1,5 @@
 from django.contrib import admin
-from Bus.models import BusList, User,Reservation
+from Bus.models import BusList, User, Reservation
 
 # Register your models here.
 

@@ -5,8 +5,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from Bus import serializers
-from Bus.models import BusList,Reservation
-from Bus.serializers import BusSerializer,UserRegistrationSerializer,BookingSerializer,UserLoginSerializer
+from Bus.models import BusList, Reservation
+from Bus.serializers import BusSerializer, UserRegistrationSerializer, BookingSerializer, UserLoginSerializer
 from rest_framework import permissions, authentication
 from django.contrib.auth import authenticate
 
@@ -43,6 +43,8 @@ class BookingView(viewsets.ModelViewSet):
     serializer_class = BookingSerializer
     queryset = Reservation.objects.all()
     model = Reservation
+
+    
     
 
 class UserLoginView(APIView):
