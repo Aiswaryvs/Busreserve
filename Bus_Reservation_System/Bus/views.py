@@ -1,4 +1,5 @@
 import email
+from django.http import HttpResponse
 from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework.views import APIView
@@ -9,6 +10,7 @@ from Bus.models import BusList, Reservation
 from Bus.serializers import BusSerializer, UserRegistrationSerializer, BookingSerializer, UserLoginSerializer
 from rest_framework import permissions, authentication
 from django.contrib.auth import authenticate
+from .tasks import *
 
 # Create your views here.
 
@@ -48,13 +50,32 @@ class UserLoginView(APIView):
 
 
 
-class BookingView(viewsets.ModelViewSet):
+class BookingView(APIView):
     serializer_class = BookingSerializer
-    queryset = Reservation.objects.all()
-    model = Reservation
+
+    def get(self,request,*args,**kwargs):
+        all_reservation = Reservation.objects.all()
+        serializer = self.serializer_class(all_reservation,many=True)
+        return Response(data=serializer.data)
+
+    def post(self,request,*args,**kwargs):
+        serializer = self.serializer_class(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            send_mail_task.delay()
+            return Response(data=serializer.data)
+        else:
+            return Response(data=serializer.errors)
+  
     authentication_classes = [authentication.TokenAuthentication]
     permission_classes = [permissions.IsAuthenticated]
+    
+   
+               
 
+def index(request):
+    send_mail_task.delay()
+    return HttpResponse("hello")
 
 
 

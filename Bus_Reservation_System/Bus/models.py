@@ -66,6 +66,9 @@ class BusList(models.Model):
     to = models.CharField(max_length=100)
     price = models.PositiveIntegerField()
 
+    class Meta:
+         unique_together=('bus_no','bus_name')
+
     # def __str__(self):
     #     return self.bus_name
 

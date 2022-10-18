@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./Bus_Reservation_System/Bus_Reservation_System"
+    ]
+}
