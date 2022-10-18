@@ -23,8 +23,7 @@ from rest_framework.authtoken.views import obtain_auth_token
 
 routers = DefaultRouter()
 routers.register("buses",views.BusView,basename="buses")
-# routers.register("booking",views.BookingView,basename="booking")
-# routers.register("price",views.PriceView,basename="price")
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),

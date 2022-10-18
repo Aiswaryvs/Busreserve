@@ -52,23 +52,27 @@ class UserLoginView(APIView):
 
 class BookingView(APIView):
     serializer_class = BookingSerializer
+    authentication_classes = [authentication.TokenAuthentication]
+    permission_classes = [permissions.IsAuthenticated]
 
-    def get(self,request,*args,**kwargs):
-        all_reservation = Reservation.objects.all()
-        serializer = self.serializer_class(all_reservation,many=True)
-        return Response(data=serializer.data)
+    def get(self, request, *args, **kwargs):
+        try:
+            all_reservation = Reservation.objects.all()
+            serializer = self.serializer_class(all_reservation, many=True)
+            return Response(data=serializer.data, status=status.HTTP_200_OK)
+        except Exception as error:
+            print("\nException Occured", error)
 
-    def post(self,request,*args,**kwargs):
+    def post(self, request, *args, **kwargs):
         serializer = self.serializer_class(data=request.data)
         if serializer.is_valid():
             serializer.save()
             send_mail_task.delay()
-            return Response(data=serializer.data)
+            return Response(data=serializer.data,status=status.HTTP_200_OK)
         else:
-            return Response(data=serializer.errors)
+            return Response(data=serializer.errors, status=status.HTTP_400_BAD_REQUEST)
   
-    authentication_classes = [authentication.TokenAuthentication]
-    permission_classes = [permissions.IsAuthenticated]
+    
     
    
                
