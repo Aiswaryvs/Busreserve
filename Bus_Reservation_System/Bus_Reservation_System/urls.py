@@ -31,7 +31,7 @@ urlpatterns = [
     path('api/v1/user/register',views.UserRegistrationView.as_view()),
     path('api/v1/user/login',views.UserLoginView.as_view()),
     path('booking/',views.BookingView.as_view()),
-    path("",views.index,name="index")
+    # path("",views.index,name="index")
    
 
 

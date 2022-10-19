@@ -40,12 +40,15 @@ class UserLoginView(APIView):
         if serializer.is_valid(raise_exception=True):
             email = serializer.data.get('email')
             password = serializer.data.get('password')
-            user = authenticate(email=email,password=password)
+            user = authenticate(request,email=email,password=password)
             if user is not None:
                 return Response({'msg:Login Successfull'},
                 status=status.HTTP_200_OK)
             else:
-                return Response(serializer.errors)
+                return Response({"msg": "Invalid credentials"},
+                status=status.HTTP_400_BAD_REQUEST)
+       
+
 
 
 
@@ -65,9 +68,10 @@ class BookingView(APIView):
 
     def post(self, request, *args, **kwargs):
         serializer = self.serializer_class(data=request.data)
+        email=request.user.users.email
         if serializer.is_valid():
             serializer.save()
-            send_mail_task.delay()
+            send_mail_task.delay([email])
             return Response(data=serializer.data,status=status.HTTP_200_OK)
         else:
             return Response(data=serializer.errors, status=status.HTTP_400_BAD_REQUEST)
@@ -77,9 +81,9 @@ class BookingView(APIView):
    
                
 
-def index(request):
-    send_mail_task.delay()
-    return HttpResponse("hello")
+# def index(request):
+#     send_mail_task.delay()
+#     return HttpResponse("hello")
 
 
 
