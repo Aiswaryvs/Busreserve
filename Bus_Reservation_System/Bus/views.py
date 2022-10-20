@@ -13,7 +13,7 @@ from django.contrib.auth import authenticate
 from .tasks import *
 
 # Create your views here.
-
+"""view for CRED operations of Buses"""
 class BusView(viewsets.ModelViewSet):
     serializer_class = BusSerializer
     queryset = BusList.objects.all()
@@ -21,7 +21,7 @@ class BusView(viewsets.ModelViewSet):
     authentication_classes = [authentication.TokenAuthentication]
     permission_classes = [permissions.IsAuthenticated]
 
-
+"""view for User registration"""
 class UserRegistrationView(APIView):
     serializer_class = UserRegistrationSerializer
     def post(self,request,format=None):
@@ -33,7 +33,7 @@ class UserRegistrationView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-
+"""view for User Login"""
 class UserLoginView(APIView):
      def post(self,request,format=None):
         serializer = UserLoginSerializer(data=request.data)
@@ -52,7 +52,8 @@ class UserLoginView(APIView):
 
 
 
-
+"""get: for listing reservations
+   post: for reservation"""
 class BookingView(APIView):
     serializer_class = BookingSerializer
     authentication_classes = [authentication.TokenAuthentication]
@@ -68,10 +69,14 @@ class BookingView(APIView):
 
     def post(self, request, *args, **kwargs):
         serializer = self.serializer_class(data=request.data)
-        email=request.user.users.email
+        # email=request.user.email
+        id = request.data["user"]
+        user_email = User.objects.get(id=id)
+        email = user_email.email
+        print(request.user)
         if serializer.is_valid():
             serializer.save()
-            send_mail_task.delay([email])
+            send_mail_task.delay(email)
             return Response(data=serializer.data,status=status.HTTP_200_OK)
         else:
             return Response(data=serializer.errors, status=status.HTTP_400_BAD_REQUEST)

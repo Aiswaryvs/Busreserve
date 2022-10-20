@@ -3,6 +3,7 @@ from django.contrib.auth.models import AbstractBaseUser, UserManager, BaseUserMa
 
 # Create your models here.
 
+"""User model"""
 class UserManager(BaseUserManager):
     def create_user(self, email, name, password=None):
         
@@ -58,7 +59,7 @@ class User(AbstractBaseUser):
     def __str__(self):
         return self.name
 
-
+"""model for Bus"""
 class BusList(models.Model):
     bus_no = models.CharField(max_length=100)
     bus_name = models.CharField(max_length=100)
@@ -72,7 +73,7 @@ class BusList(models.Model):
     # def __str__(self):
     #     return self.bus_name
 
-
+"""model for reservation"""
 class Reservation(models.Model):
     bus = models.ForeignKey(BusList,on_delete=models.CASCADE)
     user = models.ForeignKey(User,on_delete=models.CASCADE,related_name="users")
@@ -82,12 +83,9 @@ class Reservation(models.Model):
         ('booked','booked'),
         ('cancel', 'cancel') )
     status = models.CharField(choices=booking_status, default="booked", max_length=20)
+
+    class Meta:
+         unique_together=('bus','user')
     
     
 
-# class Price(models.Model):
-#     bus = models.ForeignKey(BusList,on_delete=models.CASCADE)
-#     price = models.PositiveIntegerField()
-
-#     class Meta:
-#          unique_together=('bus','price')

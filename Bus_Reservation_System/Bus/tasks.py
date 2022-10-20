@@ -21,13 +21,13 @@ def send_mail_task(email):
     logger.info("inside send mail task")
    
     send_mail(
-            subject='working of celery',
-            message='testing with celery',
+            subject='Reservation Details',
+            message='Your reservation has been successful',
             from_email=settings.EMAIL_HOST_USER,
             recipient_list=[email],
             fail_silently = False,
             )
     print("mail send")
-    return None
+    return "Done"
 
 

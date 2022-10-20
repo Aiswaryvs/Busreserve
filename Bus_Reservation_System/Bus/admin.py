@@ -5,5 +5,4 @@ from Bus.models import BusList, User, Reservation
 
 admin.site.register(Reservation)
 admin.site.register(BusList)
-# admin.site.register(Price)
 admin.site.register(User)
