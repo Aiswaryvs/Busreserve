@@ -30,4 +30,3 @@ def send_mail_task(email):
     print("mail send")
     return "Done"
 
-

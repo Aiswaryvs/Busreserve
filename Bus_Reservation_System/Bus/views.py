@@ -18,7 +18,6 @@ class BusView(viewsets.ModelViewSet):
     serializer_class = BusSerializer
     queryset = BusList.objects.all()
     model = BusList
-    authentication_classes = [authentication.TokenAuthentication]
     permission_classes = [permissions.IsAuthenticated]
 
 """view for User registration"""
@@ -56,7 +55,6 @@ class UserLoginView(APIView):
    post: for reservation"""
 class BookingView(APIView):
     serializer_class = BookingSerializer
-    authentication_classes = [authentication.TokenAuthentication]
     permission_classes = [permissions.IsAuthenticated]
 
     def get(self, request, *args, **kwargs):
@@ -70,40 +68,29 @@ class BookingView(APIView):
     def post(self, request, *args, **kwargs):
         serializer = self.serializer_class(data=request.data)
         # email=request.user.email
+        bus_id = request.data["bus"]
+        seats = BusList.objects.get(id=bus_id)
+        print(seats.total_seats)
+        print(seats.available_seats)
         id = request.data["user"]
         user_email = User.objects.get(id=id)
         email = user_email.email
         print(request.user)
-        if serializer.is_valid():
-            serializer.save()
-            send_mail_task.delay(email)
-            return Response(data=serializer.data,status=status.HTTP_200_OK)
-        else:
-            return Response(data=serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        if seats.available_seats<=seats.total_seats and seats.available_seats!=0:
+            if serializer.is_valid():
+                serializer.save()
+                seats.available_seats = seats.available_seats-1
+                print(seats.available_seats)
+                seats.save()
+                send_mail_task.delay(email)
+                return Response(data=serializer.data,status=status.HTTP_200_OK)
+            else:
+                return Response(data=serializer.errors, status=status.HTTP_400_BAD_REQUEST)
   
-    
+        else:
+            return Response({"msg": "Seats are unavailable"})
+
     
    
                
-
-# def index(request):
-#     send_mail_task.delay()
-#     return HttpResponse("hello")
-
-
-
-# class PriceView(viewsets.ModelViewSet):
-#     serializer_class = PriceSerializer
-#     queryset = Price.objects.all()
-#     model = Price
-#     authentication_classes = [authentication.TokenAuthentication]
-#     permission_classes = [permissions.IsAuthenticated]
-
-
-
-    
-
-    
-    
-
 

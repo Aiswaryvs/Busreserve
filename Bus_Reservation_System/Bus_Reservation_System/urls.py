@@ -20,6 +20,11 @@ from django.conf.urls import url
 from Bus import views
 from rest_framework.routers import DefaultRouter
 from rest_framework.authtoken.views import obtain_auth_token 
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
+
 
 routers = DefaultRouter()
 routers.register("buses",views.BusView,basename="buses")
@@ -31,7 +36,8 @@ urlpatterns = [
     path('api/v1/user/register',views.UserRegistrationView.as_view()),
     path('api/v1/user/login',views.UserLoginView.as_view()),
     path('booking/',views.BookingView.as_view()),
-    # path("",views.index,name="index")
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
    
 
 

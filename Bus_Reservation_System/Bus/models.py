@@ -66,6 +66,8 @@ class BusList(models.Model):
     from_place = models.CharField(max_length=100)
     to = models.CharField(max_length=100)
     price = models.PositiveIntegerField()
+    total_seats = models.PositiveIntegerField()
+    available_seats = models.PositiveIntegerField()
 
     class Meta:
          unique_together=('bus_no','bus_name')
