@@ -70,19 +70,23 @@ class BookingView(APIView):
         # email=request.user.email
         bus_id = request.data["bus"]
         seats = BusList.objects.get(id=bus_id)
-        print(seats.total_seats)
-        print(seats.available_seats)
+        bus_name = seats.bus_name
+        place = seats.from_place
+        to = seats.to
+        date = request.data["reservation_date"]
         id = request.data["user"]
         user_email = User.objects.get(id=id)
         email = user_email.email
-        print(request.user)
         if seats.available_seats<=seats.total_seats and seats.available_seats!=0:
             if serializer.is_valid():
                 serializer.save()
+                seat_no = (seats.total_seats-seats.available_seats)+1
                 seats.available_seats = seats.available_seats-1
                 print(seats.available_seats)
+                msg = 'Your Booking for Bus' '\t' f"{bus_name} from {place} to {to} on date {date} was successfully Reserved. Your SeatNo:{seat_no}"
+                print(msg)
                 seats.save()
-                send_mail_task.delay(email)
+                send_mail_task.delay(email,msg)
                 return Response(data=serializer.data,status=status.HTTP_200_OK)
             else:
                 return Response(data=serializer.errors, status=status.HTTP_400_BAD_REQUEST)
@@ -92,5 +96,32 @@ class BookingView(APIView):
 
     
    
-               
+    def put(self,request,*args,**kwargs):
+        id = kwargs.get("id")
+        bus_id = request.data["bus"]
+        seat = BusList.objects.get(id=bus_id)
+        instance = Reservation.objects.get(id=id)
+        bus_name = seat.bus_name
+        place = seat.from_place
+        to = seat.to
+        date = request.data["reservation_date"]
+        serializer = self.serializer_class(data=request.data, instance=instance)
+        id = request.data["user"]
+        user_email = User.objects.get(id=id)
+        email = user_email.email
+        if serializer.is_valid():
+            status = serializer.validated_data.get("status")
+            serializer.save()
+            if status=="cancel":
+                seat.available_seats = seat.available_seats+1
+                msg1 = 'Your Booking for Bus' '\t' f"{bus_name} from {place} to {to} on date {date} has been cancelled."
+                print(seat.available_seats)
+                seat.save()
+                send_mail_cancel_task.delay(email,msg1)
+                return Response(data=serializer.data)
+            else:
+                seat.available_seats = seat.available_seats-1
+                seat.save()
+        else:
+            return Response(data=serializer.errors)     
 
