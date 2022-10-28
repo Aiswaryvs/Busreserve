@@ -29,11 +29,10 @@ class BookingSerializer(serializers.ModelSerializer):
 
   
 
-class UserLoginSerializer(serializers.ModelSerializer):
-    email = serializers.EmailField()
+class BusSearchSerializer(serializers.ModelSerializer):
     class Meta:
-        model = User
-        fields = ['email','password']
+        model = BusList
+        fields = ['from_place','to']
 
 
 

@@ -19,7 +19,6 @@ from django.urls import path
 from django.conf.urls import url
 from Bus import views
 from rest_framework.routers import DefaultRouter
-from rest_framework.authtoken.views import obtain_auth_token 
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
@@ -32,14 +31,15 @@ routers.register("buses",views.BusView,basename="buses")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/token',obtain_auth_token),
     path('api/v1/user/register',views.UserRegistrationView.as_view()),
-    path('api/v1/user/login',views.UserLoginView.as_view()),
+    path('api/v1/user/<int:id>',views.UserDetailView.as_view()),
+    # path('api/v1/user/login',views.UserLoginView.as_view()),
     path('booking/',views.BookingView.as_view()),
+    path('booking/<int:id>',views.ReservationDetailView.as_view()),
+    path('api/buslists',views.BusSearchView.as_view()),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('api/booking/<int:id>',views.BookingView.as_view()),
+    
    
-
 
 ] + routers.urls

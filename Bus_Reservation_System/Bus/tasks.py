@@ -2,8 +2,6 @@ from email import message
 from logging import Logger
 
 from celery import shared_task
-from time import sleep
-from Bus.models import User,Reservation
 from Bus_Reservation_System import settings
 from django.core.mail import send_mail
 from celery.utils.log import get_task_logger
