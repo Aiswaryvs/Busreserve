@@ -29,10 +29,6 @@ class BookingSerializer(serializers.ModelSerializer):
 
   
 
-class BusSearchSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = BusList
-        fields = ['from_place','to']
 
 
 

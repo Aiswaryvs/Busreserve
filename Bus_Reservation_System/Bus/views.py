@@ -48,11 +48,12 @@ class UserRegistrationView(APIView):
 
 class UserDetailView(APIView):
     serializer_class = UserRegistrationSerializer
-    def get(self,request,*args,**kwargs):
-        id = kwargs.get("id")
-        user = User.objects.get(id=id)
-        serializer =self.serializer_class(user)
-        return Response(data=serializer.data, status=status.HTTP_200_OK)
+    def get(self,request,**kwargs):
+            id = kwargs.get("id")
+            user = User.objects.get(id=id)
+            serializer =self.serializer_class(user)
+            return Response(data=serializer.data, status=status.HTTP_200_OK)
+       
 
     def put(self,request,*args,**kwargs):
         id = kwargs.get("id")
@@ -118,7 +119,7 @@ class BookingView(APIView):
                     seat_no = (seats.total_seats-seats.available_seats)+1
                     seats.available_seats = seats.available_seats-1
                     print(seats.available_seats)
-                    msg = 'Your Booking for Bus' '\t' f"{bus_name} from {place} to {to} on date {date} was successfully Reserved. Your SeatNo:{seat_no}"
+                    msg = f"Your Booking for Bus {bus_name} from {place} to {to} on date {date} was successfully Reserved. Your SeatNo:{seat_no}"
                     print(msg)
                     seats.save()
                     send_mail_task.delay(email,msg)
@@ -134,7 +135,11 @@ class BookingView(APIView):
 
         except Exception as error:
             print("\nException Occured", error)
-    
+
+"""
+  get: for getting the reservation with specific ID
+  put: for updating the reservation details of the reservation with specific ID
+  delete : for deleting the reservation details of the reservation with specific """  
 class ReservationDetailView(APIView):
     serializer_class = BookingSerializer
     permission_classes = [permissions.IsAuthenticated]
@@ -160,25 +165,21 @@ class ReservationDetailView(APIView):
             id = request.data["user"]
             user_email = User.objects.get(id=id)
             email = user_email.email
-            response={"status":status.HTTP_400_BAD_REQUEST,"message":"User Details Updation Failed"}
             if seat.available_seats<=seat.total_seats and seat.available_seats!=0:
                 if serializer.is_valid():
                     status = serializer.validated_data.get("status")
                     serializer.save()
                     if status=="cancel":
                         seat.available_seats = seat.available_seats+1
-                        msg1 = 'Your Booking for Bus' '\t' f"{bus_name} from {place} to {to} on date {date} has been cancelled."
+                        msg1 = f"Your Booking for Bus {bus_name} from {place} to {to} on date {date} has been cancelled."
                         seat.save()
                         send_mail_cancel_task.delay(email,msg1)
-                        response["status"] = status.HTTP_200_OK
-                        response["message"] = "Reservation Updation Successfull"
-                        response["data"] = serializer.data
-                        return Response(response,status=status.HTTP_200_OK)
+                        return Response(data=serializer.data)
                     elif status=="booked":
                         seat.available_seats = seat.available_seats-1
                         seat.save()
                         seat_no = (seat.total_seats-seat.available_seats)+1
-                        msg = 'Your Booking for Bus' '\t' f"{bus_name} from {place} to {to} on date {date} was successfully Reserved. Your SeatNo:{seat_no}"
+                        msg = f"Your Booking for Bus {bus_name} from {place} to {to} on date {date} was successfully Reserved. Your SeatNo:{seat_no}"
                         send_mail_task.delay(email,msg)
                         return Response(data=serializer.data)
                 else:
@@ -197,18 +198,28 @@ class ReservationDetailView(APIView):
         reservation.delete()
         response["message"] = "Reservation Details Are Removed"
         response["status"] = status.HTTP_200_OK
-        return Response(response,status=status.HTTP_200_OK)
+        return Response(response, status=status.HTTP_200_OK)
 
 
-
+"""
+for searching of buses with particular source and destination """
 class BusSearchView(APIView):
-    serializer_class = BusSearchSerializer
+    permission_classes = [permissions.IsAuthenticated]
     
-    def post(self,request,*args,**kwargs):
-        serializer = self.serializer_class(request.data)
+    def post(self,request):
+        response = {'status':status.HTTP_400_BAD_REQUEST, 'message': "Buses are not available"}
         source = request.data["from_place"]
         destination = request.data["to"]
-        buslists = BusList.objects.filter(from_place=source,to=destination)
-        print(buslists)
-
-
+        buslists = BusList.objects.filter(from_place__icontains=source, to__icontains=destination)
+        # print(buslists)
+        bus_list = []
+        for bus in buslists:
+            buslst=bus.bus_name
+            bus_list.append(buslst)
+            response["status"] = status.HTTP_200_OK
+            response["data"] = bus_list
+            response["message"] = 'Buses are Available'
+        return Response(response, status=status.HTTP_200_OK)
+                
+        
+                    
