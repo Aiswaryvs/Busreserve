@@ -26,12 +26,16 @@ class UserRegistrationView(APIView):
 
     def get(self, request, *args, **kwargs):
         try:
+            response={"status":status.HTTP_400_BAD_REQUEST,"message":"Fetching User Details are  Failed"}
             all_user = User.objects.all()
             serializer = self.serializer_class(all_user, many=True)
-            return Response(data=serializer.data, status=status.HTTP_200_OK)
-        
-        except Exception as error:
-            print("\nException Occured", error)
+            response["status"] = status.HTTP_200_OK
+            response["message"] = "fetching User Details successful"
+            response["data"] = serializer.data
+            return Response(response, status=status.HTTP_200_OK)
+        except Exception:
+            return Response(response, status=status.HTTP_400_BAD_REQUEST)
+            
 
     def post(self,request,format=None):    
         response={"status":status.HTTP_400_BAD_REQUEST,"message":"User Creation Failed"}
@@ -49,11 +53,17 @@ class UserRegistrationView(APIView):
 class UserDetailView(APIView):
     serializer_class = UserRegistrationSerializer
     def get(self,request,**kwargs):
+        try:
+            response={"status":status.HTTP_400_BAD_REQUEST,"message":"User with this Id is not Exist"}
             id = kwargs.get("id")
             user = User.objects.get(id=id)
             serializer =self.serializer_class(user)
-            return Response(data=serializer.data, status=status.HTTP_200_OK)
-       
+            response["status"] = status.HTTP_200_OK
+            response["message"] = "fetching user Details is Successful"
+            response["data"] = serializer.data
+            return Response(response, status=status.HTTP_200_OK)
+        except Exception:
+            return Response(response, status=status.HTTP_400_BAD_REQUEST)       
 
     def put(self,request,*args,**kwargs):
         id = kwargs.get("id")
@@ -74,13 +84,16 @@ class UserDetailView(APIView):
 
 
     def delete(self,request,*args,**kwargs):
-        response = {"status":status.HTTP_400_BAD_REQUEST,"message":"User Deletion Failed"}
-        id = kwargs.get("id")
-        user = User.objects.get(id=id)
-        user.delete()
-        response["message"] = "user Details Are Removed"
-        response["status"] = status.HTTP_200_OK
-        return Response(response,status=status.HTTP_200_OK)
+        try:
+            response = {"status":status.HTTP_400_BAD_REQUEST,"message":"User Deletion Failed"}
+            id = kwargs.get("id")
+            user = User.objects.get(id=id)
+            user.delete()
+            response["message"] = "user Details Are Removed"
+            response["status"] = status.HTTP_200_OK
+            return Response(response,status=status.HTTP_200_OK)
+        except Exception:
+            return Response(response, status=status.HTTP_400_BAD_REQUEST)       
 
 
 
@@ -92,12 +105,16 @@ class BookingView(APIView):
 
     def get(self, request, *args, **kwargs):
         try:
+            response={"status":status.HTTP_400_BAD_REQUEST,"message":"Fetching Reservation Lists are failed"}
             all_reservation = Reservation.objects.all()
             serializer = self.serializer_class(all_reservation, many=True)
-            return Response(data=serializer.data, status=status.HTTP_200_OK)
+            response["status"] = status.HTTP_200_OK
+            response["message"] = "fetching Reservation Details is Successful"
+            response["data"] = serializer.data
+            return Response(response, status=status.HTTP_200_OK)
+        except Exception:
+            return Response(response, status=status.HTTP_400_BAD_REQUEST) 
         
-        except Exception as error:
-            print("\nException Occured", error)
 
     def post(self, request, *args, **kwargs):
         try:
@@ -145,10 +162,17 @@ class ReservationDetailView(APIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def get(self,request,*args,**kwargs):
-        id = kwargs.get("id")
-        reservation = Reservation.objects.get(id=id)
-        serializer = self.serializer_class(reservation)
-        return Response(serializer.data, status=status.HTTP_200_OK)
+        try:
+            response={"status":status.HTTP_400_BAD_REQUEST,"message":"Reservation with this Id is not Exist"}
+            id = kwargs.get("id")
+            reservation = Reservation.objects.get(id=id)
+            serializer = self.serializer_class(reservation)
+            response["status"] = status.HTTP_200_OK
+            response["message"] = "fetching Reservation Details is Successful"
+            response["data"] = serializer.data
+            return Response(response, status=status.HTTP_200_OK)
+        except Exception:
+            return Response(response, status=status.HTTP_400_BAD_REQUEST) 
 
     
     def put(self,request,*args,**kwargs):
@@ -165,40 +189,37 @@ class ReservationDetailView(APIView):
             id = request.data["user"]
             user_email = User.objects.get(id=id)
             email = user_email.email
-            if seat.available_seats<=seat.total_seats and seat.available_seats!=0:
-                if serializer.is_valid():
-                    status = serializer.validated_data.get("status")
-                    serializer.save()
-                    if status=="cancel":
-                        seat.available_seats = seat.available_seats+1
-                        msg1 = f"Your Booking for Bus {bus_name} from {place} to {to} on date {date} has been cancelled."
-                        seat.save()
-                        send_mail_cancel_task.delay(email,msg1)
-                        return Response(data=serializer.data)
-                    elif status=="booked":
-                        seat.available_seats = seat.available_seats-1
-                        seat.save()
-                        seat_no = (seat.total_seats-seat.available_seats)+1
-                        msg = f"Your Booking for Bus {bus_name} from {place} to {to} on date {date} was successfully Reserved. Your SeatNo:{seat_no}"
-                        send_mail_task.delay(email,msg)
-                        return Response(data=serializer.data)
+            if serializer.is_valid():
+                status = serializer.validated_data.get("status")
+                instance.status = status
+                instance.save()
+                if status=="cancel":
+                    seat.available_seats = seat.available_seats+1
+                    msg1 = f"Your Booking for Bus {bus_name} from {place} to {to} on date {date} has been cancelled."
+                    seat.save()
+                    send_mail_cancel_task.delay(email,msg1)
+                    return Response(data=serializer.data)
                 else:
-                    return Response(data=serializer.errors)  
+                    return Response({"cancellation of Bus Reservation Failed"}) 
             else:
-                return Response({"msg": "Seats are unavailable"})
+                return Response({"cancellation of Bus Reservation Failed"}) 
             
-        except Exception as error:
-                print("\nException Occured", error)
+        except Exception :
+            return Response({"cancellation of Bus Reservation Failed"}) 
 
 
     def delete(self,request,*args,**kwargs):
-        response = {"status":status.HTTP_400_BAD_REQUEST,"message":"Reservation Deletion Failed"}
-        id = kwargs.get("id")
-        reservation = Reservation.objects.get(id=id)
-        reservation.delete()
-        response["message"] = "Reservation Details Are Removed"
-        response["status"] = status.HTTP_200_OK
-        return Response(response, status=status.HTTP_200_OK)
+        try:
+            response = {"status":status.HTTP_400_BAD_REQUEST,"message":"Reservation Deletion Failed"}
+            id = kwargs.get("id")
+            reservation = Reservation.objects.get(id=id)
+            reservation.delete()
+            response["message"] = "Reservation Details Are Removed"
+            response["status"] = status.HTTP_200_OK
+            return Response(response, status=status.HTTP_200_OK)
+        except Exception:
+            return Response(response, status=status.HTTP_400_BAD_REQUEST) 
+
 
 
 """
