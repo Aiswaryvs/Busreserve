@@ -11,26 +11,98 @@ from rest_framework import permissions, authentication
 from django.contrib.auth import authenticate
 from .tasks import *
 
+
 # Create your views here.
 """view for CRED operations of Buses"""
-class BusView(viewsets.ModelViewSet):
+class BusView(APIView):
     serializer_class = BusSerializer
-    queryset = BusList.objects.all()
-    model = BusList
     permission_classes = [permissions.IsAuthenticated]
 
-"""view for User registration"""
+    def get(self, request, *args, **kwargs):
+        try:
+            response={"status":status.HTTP_400_BAD_REQUEST,"message":"Fetching Buses Details are  Failed"}
+            all_buses = BusList.objects.all()
+            serializer = self.serializer_class(all_buses, many=True)
+            response["status"] = status.HTTP_200_OK
+            response["message"] = " Buses Details fetched successfully"
+            response["data"] = serializer.data
+            return Response(response, status=status.HTTP_200_OK)
+        except Exception:
+            return Response(response, status=status.HTTP_400_BAD_REQUEST)
+
+    def post(self,request,format=None):    
+        response={"status":status.HTTP_400_BAD_REQUEST,"message":"Bus Creation Failed"}
+        serializer = self.serializer_class(data=request.data)
+        if serializer.is_valid(raise_exception=False):
+            serializer.save()
+            response["status"] = status.HTTP_201_CREATED
+            response["message"] = "Bus Creation Successfull"
+            response["data"] = serializer.data
+            return Response(response, status=status.HTTP_201_CREATED)
+        return Response(response, status=status.HTTP_400_BAD_REQUEST)
+
+class BusDetailsView(APIView):
+    serializer_class = BusSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get(self,request,**kwargs):
+        try:
+            response={"status":status.HTTP_400_BAD_REQUEST,"message":"Bus with this Id is not Exist"}
+            id = kwargs.get("id")
+            bus = BusList.objects.get(id=id)
+            serializer =self.serializer_class(bus)
+            response["status"] = status.HTTP_200_OK
+            response["message"] = " Bus Details fetched successfully"
+            response["data"] = serializer.data
+            return Response(response, status=status.HTTP_200_OK)
+        except Exception:
+            return Response(response, status=status.HTTP_400_BAD_REQUEST)   
+
+    def put(self,request,**kwargs):
+            try:
+                id = kwargs.get("id")
+                instance = BusList.objects.get(id=id)
+                response={"status":status.HTTP_400_BAD_REQUEST,"message":"Bus Details Updation Failed"}
+                serializer = self.serializer_class(data=request.data, instance=instance)
+                if serializer.is_valid():
+                    serializer.save()
+                    response["status"]=status.HTTP_200_OK
+                    response["message"]="Updation Successfull"
+                    response["data"]=serializer.data
+                    return Response(response, status=status.HTTP_200_OK)
+                return Response(response, status=status.HTTP_400_BAD_REQUEST)
+            except Exception as e:
+                return Response(response, status=status.HTTP_400_BAD_REQUEST)
+
+    def delete(self,request,*args,**kwargs):
+        try:
+            response = {"status":status.HTTP_400_BAD_REQUEST,"message":"Bus Deletion Failed"}
+            id = kwargs.get("id")
+            bus = BusList.objects.get(id=id)
+            bus.delete()
+            response["message"] = "Bus Details Are Removed"
+            response["status"] = status.HTTP_200_OK
+            return Response(response,status=status.HTTP_200_OK)
+        except Exception:
+            return Response(response, status=status.HTTP_400_BAD_REQUEST)
+
+            
+
+
+"""
+    get: list users
+    post: User registration"""
 class UserRegistrationView(APIView):
 
     serializer_class = UserRegistrationSerializer
 
     def get(self, request, *args, **kwargs):
         try:
-            response={"status":status.HTTP_400_BAD_REQUEST,"message":"Fetching User Details are  Failed"}
+            response={"status":status.HTTP_400_BAD_REQUEST,"message":"Fetching Users Details are  Failed"}
             all_user = User.objects.all()
             serializer = self.serializer_class(all_user, many=True)
             response["status"] = status.HTTP_200_OK
-            response["message"] = "fetching User Details successful"
+            response["message"] = " Users Details fetched successfully"
             response["data"] = serializer.data
             return Response(response, status=status.HTTP_200_OK)
         except Exception:
@@ -49,7 +121,10 @@ class UserRegistrationView(APIView):
         return Response(response, status=status.HTTP_400_BAD_REQUEST)
 
 
-
+"""
+ get: get details of the specific user
+ put : update user detals
+ delete : user deletion """
 class UserDetailView(APIView):
     serializer_class = UserRegistrationSerializer
     def get(self,request,**kwargs):
@@ -59,28 +134,35 @@ class UserDetailView(APIView):
             user = User.objects.get(id=id)
             serializer =self.serializer_class(user)
             response["status"] = status.HTTP_200_OK
-            response["message"] = "fetching user Details is Successful"
+            response["message"] = " User Details fetched successfully"
             response["data"] = serializer.data
             return Response(response, status=status.HTTP_200_OK)
         except Exception:
             return Response(response, status=status.HTTP_400_BAD_REQUEST)       
 
     def put(self,request,*args,**kwargs):
-        id = kwargs.get("id")
-        instance = User.objects.get(id=id)
-        response={"status":status.HTTP_400_BAD_REQUEST,"message":"User Details Updation Failed"}
-        serializer = self.serializer_class(data=request.data)
-        if serializer.is_valid():
-            response["status"]=status.HTTP_200_OK
-            response["message"]="Updation Successfull"
-            response["data"]=serializer.data
-            name = serializer.validated_data.get("name")
-            email = serializer.validated_data.get("email")
-            instance.name = name
-            instance.email = email
-            instance.save()
-            return Response(response, status=status.HTTP_200_OK)
-        return Response(response, status=status.HTTP_400_BAD_REQUEST)
+        try:
+            id = kwargs.get("id")
+            instance = User.objects.get(id=id)
+
+            response={"status":status.HTTP_400_BAD_REQUEST,"message":"User Details Updation Failed"}
+            serializer = self.serializer_class(data=request.data, instance=instance)
+            if serializer.is_valid():
+                name = serializer.validated_data.get("name")
+                email = serializer.validated_data.get("email")
+                password = serializer.validated_data.get("password")
+                instance.name = name
+                instance.email = email
+                instance.set_password(password)
+                instance.save()
+                response["status"]=status.HTTP_200_OK
+                response["message"]="Updation Successfull"
+                response["data"]=serializer.data
+                return Response(response, status=status.HTTP_200_OK)
+            return Response(response, status=status.HTTP_400_BAD_REQUEST)
+        except Exception as e:
+            print(e)
+            return Response(response, status=status.HTTP_400_BAD_REQUEST)
 
 
     def delete(self,request,*args,**kwargs):
@@ -150,8 +232,8 @@ class BookingView(APIView):
             else:
                 return Response({"msg": "Seats are unavailable"})
 
-        except Exception as error:
-            print("\nException Occured", error)
+        except Exception:
+           return Response(response, status=status.HTTP_400_BAD_REQUEST)
 
 """
   get: for getting the reservation with specific ID
@@ -241,6 +323,8 @@ class BusSearchView(APIView):
             response["data"] = bus_list
             response["message"] = 'Buses are Available'
         return Response(response, status=status.HTTP_200_OK)
+
+
                 
         
                     

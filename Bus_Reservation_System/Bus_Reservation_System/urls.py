@@ -24,22 +24,18 @@ from rest_framework_simplejwt.views import (
     TokenRefreshView,
 )
 
-
-routers = DefaultRouter()
-routers.register("buses",views.BusView,basename="buses")
-
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/user/register',views.UserRegistrationView.as_view()),
     path('api/v1/user/<int:id>',views.UserDetailView.as_view()),
-    # path('api/v1/user/login',views.UserLoginView.as_view()),
-    path('booking/',views.BookingView.as_view()),
-    path('booking/<int:id>',views.ReservationDetailView.as_view()),
+    path('api/buses',views.BusView.as_view()),
+    path('api/buses/<int:id>',views.BusDetailsView.as_view()),
+    path('api/booking/',views.BookingView.as_view()),
+    path('api/booking/<int:id>',views.ReservationDetailView.as_view()),
     path('api/buslists',views.BusSearchView.as_view()),
-    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     
    
 
-] + routers.urls
+]
