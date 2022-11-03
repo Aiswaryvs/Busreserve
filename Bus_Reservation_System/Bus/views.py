@@ -7,13 +7,14 @@ from rest_framework.response import Response
 from rest_framework import status
 from Bus.models import BusList, Reservation
 from Bus.serializers import *
-from rest_framework import permissions, authentication
-from django.contrib.auth import authenticate
+from rest_framework import permissions
 from .tasks import *
 
 
 # Create your views here.
-"""view for CRED operations of Buses"""
+"""
+get : listing of buses
+post : creation of bus """
 class BusView(APIView):
     serializer_class = BusSerializer
     permission_classes = [permissions.IsAuthenticated]
@@ -40,7 +41,10 @@ class BusView(APIView):
             response["data"] = serializer.data
             return Response(response, status=status.HTTP_201_CREATED)
         return Response(response, status=status.HTTP_400_BAD_REQUEST)
-
+"""
+get : get the details of specific bus
+put : update details of specific bus
+delete : delete specific bus """
 class BusDetailsView(APIView):
     serializer_class = BusSerializer
     permission_classes = [permissions.IsAuthenticated]
@@ -123,8 +127,8 @@ class UserRegistrationView(APIView):
 
 """
  get: get details of the specific user
- put : update user detals
- delete : user deletion """
+ put : update  specific user details
+ delete : deletion of specific user"""
 class UserDetailView(APIView):
     serializer_class = UserRegistrationSerializer
     def get(self,request,**kwargs):
@@ -238,7 +242,7 @@ class BookingView(APIView):
 """
   get: for getting the reservation with specific ID
   put: for updating the reservation details of the reservation with specific ID
-  delete : for deleting the reservation details of the reservation with specific """  
+  delete : for deleting the reservation details of the reservation with specific id"""  
 class ReservationDetailView(APIView):
     serializer_class = BookingSerializer
     permission_classes = [permissions.IsAuthenticated]
@@ -314,7 +318,6 @@ class BusSearchView(APIView):
         source = request.data["from_place"]
         destination = request.data["to"]
         buslists = BusList.objects.filter(from_place__icontains=source, to__icontains=destination)
-        # print(buslists)
         bus_list = []
         for bus in buslists:
             buslst=bus.bus_name
