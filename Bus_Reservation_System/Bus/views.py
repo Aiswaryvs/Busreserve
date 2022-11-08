@@ -7,8 +7,13 @@ from rest_framework.response import Response
 from rest_framework import status
 from Bus.models import BusList, Reservation
 from Bus.serializers import *
+import os,sys
 from rest_framework import permissions
 from .tasks import *
+import logging
+# logger = logging.getLogger('django')
+db_logger = logging.getLogger('django')
+
 
 
 # Create your views here.
@@ -30,6 +35,7 @@ class BusView(APIView):
             return Response(response, status=status.HTTP_200_OK)
         except Exception:
             return Response(response, status=status.HTTP_400_BAD_REQUEST)
+            
 
     def post(self,request,format=None):    
         response={"status":status.HTTP_400_BAD_REQUEST,"message":"Bus Creation Failed"}
@@ -241,7 +247,7 @@ class BookingView(APIView):
 
 """
   get: for getting the reservation with specific ID
-  put: for updating the reservation details of the reservation with specific ID
+  put: for cancel the reservation
   delete : for deleting the reservation details of the reservation with specific id"""  
 class ReservationDetailView(APIView):
     serializer_class = BookingSerializer

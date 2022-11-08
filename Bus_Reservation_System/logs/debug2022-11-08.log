@@ -1,0 +1,63 @@
+INFO basehttp "GET /api/buses HTTP/1.1" 200 1546 2022-11-08 06:16:21,479  161 27738 139726344828672
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 06:27:27,644  637 28634 139738503149376
+INFO basehttp "GET /api/buses HTTP/1.1" 200 1546 2022-11-08 06:27:31,423  161 28634 139738292934400
+WARNING log Not Found: / 2022-11-08 06:28:43,900  230 28634 139738284017408
+WARNING basehttp "GET / HTTP/1.1" 404 3180 2022-11-08 06:28:43,901  161 28634 139738284017408
+WARNING log Not Found: /favicon.ico 2022-11-08 06:28:43,964  230 28634 139738284017408
+WARNING basehttp "GET /favicon.ico HTTP/1.1" 404 3231 2022-11-08 06:28:43,965  161 28634 139738284017408
+INFO basehttp "GET /admin/ HTTP/1.1" 200 5120 2022-11-08 06:28:50,692  161 28634 139738284017408
+INFO basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0 2022-11-08 06:28:50,835  161 28634 139738275624704
+INFO basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0 2022-11-08 06:28:50,837  161 28634 139738284017408
+INFO basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0 2022-11-08 06:28:50,837  161 28634 139738266445568
+INFO basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0 2022-11-08 06:28:50,903  161 28634 139738284017408
+INFO basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0 2022-11-08 06:28:50,903  161 28634 139738266445568
+INFO basehttp "GET /static/admin/css/fonts.css HTTP/1.1" 304 0 2022-11-08 06:28:50,971  161 28634 139738266445568
+INFO basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0 2022-11-08 06:28:51,055  161 28634 139738284017408
+INFO basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0 2022-11-08 06:28:51,055  161 28634 139738266445568
+INFO basehttp "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0 2022-11-08 06:28:51,075  161 28634 139738284017408
+INFO basehttp "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0 2022-11-08 06:28:51,077  161 28634 139738275624704
+INFO basehttp "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0 2022-11-08 06:28:51,099  161 28634 139738266445568
+INFO basehttp "GET /admin/django_db_logger/statuslog/ HTTP/1.1" 200 6506 2022-11-08 06:28:52,874  161 28634 139738266445568
+INFO basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0 2022-11-08 06:28:52,965  161 28634 139738257528576
+INFO basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0 2022-11-08 06:28:52,966  161 28634 139738249135872
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3195 2022-11-08 06:28:53,019  161 28634 139738266445568
+INFO basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381 2022-11-08 06:28:53,026  161 28634 139738275624704
+INFO basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0 2022-11-08 06:28:53,035  161 28634 139738249135872
+INFO basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0 2022-11-08 06:28:53,086  161 28634 139738266445568
+INFO basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0 2022-11-08 06:28:53,098  161 28634 139738249135872
+INFO basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0 2022-11-08 06:28:53,111  161 28634 139738275624704
+INFO basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 287630 2022-11-08 06:28:53,113  161 28634 139738284017408
+INFO basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0 2022-11-08 06:28:53,114  161 28634 139738249135872
+INFO basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0 2022-11-08 06:28:53,182  161 28634 139738249135872
+INFO basehttp "GET /api/buses HTTP/1.1" 200 1546 2022-11-08 06:29:03,423  161 28634 139738292934400
+INFO basehttp "GET /admin/django_db_logger/statuslog/? HTTP/1.1" 200 6506 2022-11-08 06:29:10,917  161 28634 139738249135872
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3195 2022-11-08 06:29:10,951  161 28634 139738249135872
+INFO basehttp "GET /admin/django_db_logger/statuslog/? HTTP/1.1" 200 6506 2022-11-08 06:29:14,211  161 28634 139738249135872
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3195 2022-11-08 06:29:14,243  161 28634 139738249135872
+INFO basehttp "GET /admin/django_db_logger/statuslog/? HTTP/1.1" 200 6506 2022-11-08 06:29:15,001  161 28634 139738249135872
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3195 2022-11-08 06:29:15,034  161 28634 139738249135872
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 06:30:00,524  251 28634 139738503149376
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 06:30:02,955  637 28876 140282360043328
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 06:30:07,583  251 28876 140282360043328
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 06:30:08,044  637 28916 140340286605120
+INFO basehttp "GET /api/buses HTTP/1.1" 200 1546 2022-11-08 06:30:13,367  161 28916 140340069660416
+INFO basehttp "GET /admin/django_db_logger/statuslog/? HTTP/1.1" 200 6506 2022-11-08 06:30:35,396  161 28916 140340061267712
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3195 2022-11-08 06:30:35,485  161 28916 140340061267712
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/settings.py changed, reloading. 2022-11-08 06:31:27,027  251 28916 140340286605120
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 06:32:28,388  637 29089 140244458264384
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 06:33:38,278  251 29089 140244458264384
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 06:33:39,414  637 29164 140342409369408
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 06:33:40,767  251 29164 140342409369408
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 06:33:41,318  637 29189 139631207929664
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 06:33:47,694  251 29189 139631207929664
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 06:33:48,185  637 29222 140117746669376
+INFO basehttp "GET /api/buses HTTP/1.1" 200 1546 2022-11-08 06:33:52,504  161 29222 140117536405248
+INFO basehttp "GET /admin/django_db_logger/statuslog/? HTTP/1.1" 200 6506 2022-11-08 06:33:59,691  161 29222 140117527488256
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3195 2022-11-08 06:33:59,726  161 29222 140117527488256
+INFO basehttp "GET /admin/django_db_logger/statuslog/? HTTP/1.1" 200 6506 2022-11-08 06:34:02,649  161 29222 140117527488256
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3195 2022-11-08 06:34:02,684  161 29222 140117527488256
+INFO basehttp "GET /admin/django_db_logger/statuslog/?level__exact=20 HTTP/1.1" 200 6652 2022-11-08 06:34:05,728  161 29222 140117527488256
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3195 2022-11-08 06:34:05,763  161 29222 140117527488256
+INFO basehttp "GET /admin/django_db_logger/statuslog/? HTTP/1.1" 200 6506 2022-11-08 06:34:07,484  161 29222 140117527488256
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3195 2022-11-08 06:34:07,517  161 29222 140117527488256
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/settings.py changed, reloading. 2022-11-08 06:37:30,202  251 29222 140117746669376

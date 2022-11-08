@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-from datetime import timedelta
+from datetime import timedelta,datetime
+import os
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     'Bus',
     'rest_framework',
     'rest_framework_simplejwt',
+    'django_db_logger',
 ]
 
 REST_FRAMEWORK = {
@@ -175,3 +177,27 @@ EMAIL_USER_SSL = False
 # wkqhikdfrqcueevd
 
 
+LOGGING ={
+    'version':1,
+    'loggers':{
+        'django':{
+            'handlers':['bus_log'],
+            'level': 'DEBUG',
+        }
+    },
+    'handlers':{ 
+        'bus_log':{
+            'level': 'INFO',
+            # 'class': 'logging.FileHandler',
+            'class': 'django_db_logger.db_log_handler.DatabaseLogHandler',
+            # 'filename': './logs/debug{:%Y-%m-%d}.log'.format(datetime.now()),
+            'formatter': 'simpleRe',
+        }
+    },
+    'formatters':{
+        'simpleRe': {
+            'format': '{levelname} {module} {message} {asctime}  {lineno} {process:d} {thread:d}',
+            'style': '{', 
+        }
+    }
+}
