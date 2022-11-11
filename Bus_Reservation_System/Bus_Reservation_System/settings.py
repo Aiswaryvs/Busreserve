@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'django_db_logger',
+    'demofile',
+    'django_extensions',
 ]
 
 REST_FRAMEWORK = {
@@ -51,7 +53,8 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
     
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
+    ),
+    'DATETIME_FORMAT': "%d %B %Y %I:%M %p",
 }
 
 MIDDLEWARE = [
@@ -181,7 +184,7 @@ LOGGING ={
     'version':1,
     'loggers':{
         'django':{
-            'handlers':['bus_log'],
+            'handlers':['bus_log','file_log'],
             'level': 'DEBUG',
         }
     },
@@ -191,6 +194,12 @@ LOGGING ={
             # 'class': 'logging.FileHandler',
             'class': 'django_db_logger.db_log_handler.DatabaseLogHandler',
             # 'filename': './logs/debug{:%Y-%m-%d}.log'.format(datetime.now()),
+            # 'formatter': 'simpleRe',
+        },
+        'file_log':{
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': './logs/debug{:%Y-%m-%d}.log'.format(datetime.now()),
             'formatter': 'simpleRe',
         }
     },
@@ -201,3 +210,10 @@ LOGGING ={
         }
     }
 }
+
+# Actual directory user files go to
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'Bus_Reservation_System/images')
+# print(MEDIA_ROOT)
+
+# URL used to access the media
+MEDIA_URL = '/files/'

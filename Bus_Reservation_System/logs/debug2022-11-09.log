@@ -1,0 +1,404 @@
+ERROR log Internal Server Error: /api/booking/ 2022-11-09 09:56:08,192  230 13088 139784291899136
+Traceback (most recent call last):
+  File "/home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py", line 225, in post
+    s=date.replace(tzinfo=None)
+TypeError: replace() takes no keyword arguments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py", line 254, in post
+    return Response(response, status=status.HTTP_400_BAD_REQUEST)
+UnboundLocalError: local variable 'response' referenced before assignment
+ERROR basehttp "POST /api/booking/ HTTP/1.1" 500 104983 2022-11-09 09:56:08,267  161 13088 139784291899136
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 09:59:34,055  251 13088 139784440297280
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 09:59:34,739  637 13258 139930309408576
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 09:59:41,323  251 13258 139930309408576
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 09:59:41,864  637 13313 140094319511360
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 09:59:43,067  251 13313 140094319511360
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 09:59:43,626  637 13331 140550101649216
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:01:17,010  251 13331 140550101649216
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:01:17,557  637 13384 140207161673536
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:01:21,791  251 13384 140207161673536
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:01:22,393  637 13417 140648975849280
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:01:24,664  251 13417 140648975849280
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:01:25,176  637 13447 140327207515968
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:01:32,482  251 13447 140327207515968
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:01:32,976  637 13475 139752744232768
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:01:38,409  251 13475 139752744232768
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:01:38,941  637 13504 139742329976640
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:01:40,334  251 13504 139742329976640
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:01:40,890  637 13533 140401988249408
+ERROR log Internal Server Error: /api/booking/ 2022-11-09 10:01:53,904  230 13533 140401839851264
+Traceback (most recent call last):
+  File "/home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py", line 223, in post
+    date = (request.data["reservation_date"]).replace(tzinfo=None).strftime("%d %B %Y %I:%M %p")
+TypeError: replace() takes no keyword arguments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py", line 252, in post
+    return Response(response, status=status.HTTP_400_BAD_REQUEST)
+UnboundLocalError: local variable 'response' referenced before assignment
+ERROR basehttp "POST /api/booking/ HTTP/1.1" 500 104823 2022-11-09 10:01:53,933  161 13533 140401839851264
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:02:59,021  251 13533 140401988249408
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:02:59,574  637 13594 140329919260480
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:03:01,754  251 13594 140329919260480
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:03:02,323  637 13625 139887403591488
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:03:12,662  251 13625 139887403591488
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:03:13,224  637 13656 140604733282112
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:03:32,971  251 13656 140604733282112
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:03:33,614  637 13706 140456171046720
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:03:36,085  251 13706 140456171046720
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:03:36,637  637 13735 140592118339392
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:03:40,882  251 13735 140592118339392
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:03:41,379  637 13766 140201747457856
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:03:42,720  251 13766 140201747457856
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:03:43,249  637 13778 139859741800256
+ERROR log Internal Server Error: /api/booking/ 2022-11-09 10:06:07,506  230 13778 139859593402112
+Traceback (most recent call last):
+  File "/home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py", line 225, in post
+    s=date.replace(tzinfo=None).strftime("%d %B %Y %I:%M %p")
+TypeError: replace() takes no keyword arguments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py", line 252, in post
+    return Response(response, status=status.HTTP_400_BAD_REQUEST)
+UnboundLocalError: local variable 'response' referenced before assignment
+ERROR basehttp "POST /api/booking/ HTTP/1.1" 500 105188 2022-11-09 10:06:07,523  161 13778 139859593402112
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:07:41,171  251 13778 139859741800256
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:07:41,896  637 13966 140112241272640
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:07:47,199  251 13966 140112241272640
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:07:48,150  637 13998 139840099964736
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:07:58,609  251 13998 139840099964736
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:07:59,312  637 14036 140483574744896
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:08:01,551  251 14036 140483574744896
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:08:02,241  637 14067 140499060361024
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:08:03,467  251 14067 140499060361024
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:08:04,254  637 14078 140114121004864
+ERROR log Internal Server Error: /api/booking/ 2022-11-09 10:08:12,203  230 14078 140113905383168
+Traceback (most recent call last):
+  File "/home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py", line 223, in post
+    date = (request.data["reservation_date"]).replace(tzinfo=None)
+TypeError: replace() takes no keyword arguments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py", line 252, in post
+    return Response(response, status=status.HTTP_400_BAD_REQUEST)
+UnboundLocalError: local variable 'response' referenced before assignment
+ERROR basehttp "POST /api/booking/ HTTP/1.1" 500 104718 2022-11-09 10:08:12,230  161 14078 140113905383168
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:08:27,222  251 14078 140114121004864
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:08:28,125  637 14136 140671202322240
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:08:30,543  251 14136 140671202322240
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:08:31,171  637 14167 140127454639936
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:08:34,604  251 14167 140127454639936
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:08:35,277  637 14191 140498085435200
+ERROR log Internal Server Error: /api/booking/ 2022-11-09 10:10:12,174  230 14191 140497937037056
+Traceback (most recent call last):
+  File "/home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py", line 225, in post
+    s=date.replace(tzinfo=None).strftime("%d %B %Y %I:%M %p")
+TypeError: replace() takes no keyword arguments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py", line 252, in post
+    return Response(response, status=status.HTTP_400_BAD_REQUEST)
+UnboundLocalError: local variable 'response' referenced before assignment
+ERROR basehttp "POST /api/booking/ HTTP/1.1" 500 105188 2022-11-09 10:10:12,204  161 14191 140497937037056
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:18:48,471  251 14191 140498085435200
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:18:49,024  637 15135 140597871187776
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:20:05,788  251 15135 140597871187776
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:20:09,247  637 15222 139993989642048
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:20:13,739  251 15222 139993989642048
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:20:14,311  637 15266 140402788820800
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:20:21,838  251 15266 140402788820800
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:20:22,326  637 15310 140220903864128
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:20:23,667  251 15310 140220903864128
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:20:24,162  637 15323 140482348939072
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:27:43,062  251 15323 140482348939072
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:27:43,762  637 15594 140598124705600
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:27:46,204  251 15594 140598124705600
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:27:46,727  637 15622 139682225006400
+ERROR log Internal Server Error: /api/booking/ 2022-11-09 10:27:52,792  230 15622 139682076608256
+Traceback (most recent call last):
+  File "/home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py", line 225, in post
+    s=serializer.date.replace(tzinfo=None).strftime("%d %B %Y %I:%M %p")
+AttributeError: 'BookingSerializer' object has no attribute 'date'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py", line 252, in post
+    return Response(response, status=status.HTTP_400_BAD_REQUEST)
+UnboundLocalError: local variable 'response' referenced before assignment
+ERROR basehttp "POST /api/booking/ HTTP/1.1" 500 105278 2022-11-09 10:27:52,824  161 15622 139682076608256
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:28:01,434  251 15622 139682225006400
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:28:01,953  637 15691 139873400203072
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:28:48,198  251 15691 139873400203072
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:28:48,722  637 15755 140652640384832
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:28:54,126  251 15755 140652640384832
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:28:54,637  637 15783 140718951143232
+ERROR log Internal Server Error: /api/booking/ 2022-11-09 10:29:00,740  230 15783 140718802745088
+Traceback (most recent call last):
+  File "/home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py", line 225, in post
+    s=date.replace(tzinfo=None).strftime("%d %B %Y %I:%M %p")
+TypeError: replace() takes no keyword arguments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py", line 252, in post
+    return Response(response, status=status.HTTP_400_BAD_REQUEST)
+UnboundLocalError: local variable 'response' referenced before assignment
+ERROR basehttp "POST /api/booking/ HTTP/1.1" 500 105188 2022-11-09 10:29:00,758  161 15783 140718802745088
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:30:39,134  251 15783 140718951143232
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:30:39,649  637 15889 140421003081536
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:30:42,062  251 15889 140421003081536
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:30:42,554  637 15913 139941106603840
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:49:03,564  251 15913 139941106603840
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:49:08,344  637 17421 139632525350720
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:49:15,282  251 17421 139632525350720
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:49:15,803  637 17492 139874589947712
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:49:47,792  251 17492 139874589947712
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:49:48,364  637 17568 140547578849088
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:50:22,412  251 17568 140547578849088
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:50:22,963  637 17627 140166339233600
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:50:25,299  251 17627 140166339233600
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:50:25,792  637 17657 140014928258880
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:50:37,387  637 17699 139680145741632
+WARNING log Unauthorized: /api/booking/ 2022-11-09 10:50:42,197  230 17699 139679997343488
+WARNING basehttp "POST /api/booking/ HTTP/1.1" 401 183 2022-11-09 10:50:42,241  161 17699 139679997343488
+INFO basehttp "POST /api/login/ HTTP/1.1" 200 441 2022-11-09 10:50:47,411  161 17699 139679997343488
+ERROR log Internal Server Error: /api/booking/ 2022-11-09 10:50:50,523  230 17699 139679997343488
+Traceback (most recent call last):
+  File "/home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py", line 226, in post
+    js_obj=json.loads(date)
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 342, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 1 column 5 (char 4)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py", line 254, in post
+    return Response(response, status=status.HTTP_400_BAD_REQUEST)
+UnboundLocalError: local variable 'response' referenced before assignment
+ERROR basehttp "POST /api/booking/ HTTP/1.1" 500 114644 2022-11-09 10:50:50,548  161 17699 139679997343488
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:51:07,573  251 17699 139680145741632
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:51:08,113  637 17829 140649757394752
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:51:09,484  251 17829 140649757394752
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:51:09,984  637 17850 139671754872640
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:51:14,382  251 17850 139671754872640
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:51:14,915  637 17879 139829935552320
+ERROR log Internal Server Error: /api/booking/ 2022-11-09 10:51:18,901  230 17879 139829787154176
+Traceback (most recent call last):
+  File "/home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py", line 226, in post
+    js_obj=json.loads(date)
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 342, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 1 column 5 (char 4)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py", line 254, in post
+    return Response(response, status=status.HTTP_400_BAD_REQUEST)
+UnboundLocalError: local variable 'response' referenced before assignment
+ERROR basehttp "POST /api/booking/ HTTP/1.1" 500 114646 2022-11-09 10:51:18,996  161 17879 139829787154176
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:51:29,693  251 17879 139829935552320
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:51:30,447  637 17948 140361023035200
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:51:31,816  251 17948 140361023035200
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:51:32,320  637 17969 140077045798720
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:51:39,786  251 17969 140077045798720
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:51:40,327  637 18002 139692767225664
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:51:46,767  251 18002 139692767225664
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:51:47,285  637 18044 139643230209856
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:51:48,635  251 18044 139643230209856
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:51:49,133  637 18060 140304818607936
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 10:51:50,460  251 18060 140304818607936
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 10:51:50,986  637 18074 140321158018880
+ERROR log Internal Server Error: /api/booking/ 2022-11-09 11:14:53,694  230 18074 140320942323456
+Traceback (most recent call last):
+  File "/home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py", line 225, in post
+    s=date.replace(tzinfo=None).strftime("%d %B %Y %I:%M %p")
+TypeError: replace() takes no keyword arguments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py", line 252, in post
+    return Response(response, status=status.HTTP_400_BAD_REQUEST)
+UnboundLocalError: local variable 'response' referenced before assignment
+ERROR basehttp "POST /api/booking/ HTTP/1.1" 500 105188 2022-11-09 11:14:53,746  161 18074 140320942323456
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-09 11:49:52,929  251 18074 140321158018880
+INFO autoreload Watching for file changes with StatReloader 2022-11-09 11:49:55,379  637 19873 140251601667904

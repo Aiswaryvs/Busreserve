@@ -15,17 +15,27 @@ Including another URLconf
 """
 from macpath import basename
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from django.conf.urls import url
 from Bus import views
+from demofile.views import ProfileView,EmployeeList,EmployeeView,EmployeeListView,EmployeeCreate,FilterView
 from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
+from django.conf import settings
+from django.conf.urls.static import static
+routers=DefaultRouter()
+routers.register("api/v2/profile",ProfileView,basename="profile")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/v2/employee/',EmployeeList.as_view()),
+    path('api/v2/employees/',EmployeeListView.as_view()),
+    path('api/v2/employe/',EmployeeCreate.as_view()),
+    path('api/v2/employe/filter/',FilterView.as_view()),
+    path('api/v2/employee/<id>',EmployeeView.as_view()),
     path('api/v1/user/register',views.UserRegistrationView.as_view()),
     path('api/v1/user/<int:id>',views.UserDetailView.as_view()),
     path('api/buses',views.BusView.as_view()),
@@ -36,4 +46,4 @@ urlpatterns = [
     path('api/login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     
-]
+] + routers.urls +static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

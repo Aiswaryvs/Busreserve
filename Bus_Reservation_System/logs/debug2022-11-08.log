@@ -1,63 +1,57 @@
-INFO basehttp "GET /api/buses HTTP/1.1" 200 1546 2022-11-08 06:16:21,479  161 27738 139726344828672
-INFO autoreload Watching for file changes with StatReloader 2022-11-08 06:27:27,644  637 28634 139738503149376
-INFO basehttp "GET /api/buses HTTP/1.1" 200 1546 2022-11-08 06:27:31,423  161 28634 139738292934400
-WARNING log Not Found: / 2022-11-08 06:28:43,900  230 28634 139738284017408
-WARNING basehttp "GET / HTTP/1.1" 404 3180 2022-11-08 06:28:43,901  161 28634 139738284017408
-WARNING log Not Found: /favicon.ico 2022-11-08 06:28:43,964  230 28634 139738284017408
-WARNING basehttp "GET /favicon.ico HTTP/1.1" 404 3231 2022-11-08 06:28:43,965  161 28634 139738284017408
-INFO basehttp "GET /admin/ HTTP/1.1" 200 5120 2022-11-08 06:28:50,692  161 28634 139738284017408
-INFO basehttp "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0 2022-11-08 06:28:50,835  161 28634 139738275624704
-INFO basehttp "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0 2022-11-08 06:28:50,837  161 28634 139738284017408
-INFO basehttp "GET /static/admin/css/base.css HTTP/1.1" 304 0 2022-11-08 06:28:50,837  161 28634 139738266445568
-INFO basehttp "GET /static/admin/css/responsive.css HTTP/1.1" 304 0 2022-11-08 06:28:50,903  161 28634 139738284017408
-INFO basehttp "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0 2022-11-08 06:28:50,903  161 28634 139738266445568
-INFO basehttp "GET /static/admin/css/fonts.css HTTP/1.1" 304 0 2022-11-08 06:28:50,971  161 28634 139738266445568
-INFO basehttp "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0 2022-11-08 06:28:51,055  161 28634 139738284017408
-INFO basehttp "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0 2022-11-08 06:28:51,055  161 28634 139738266445568
-INFO basehttp "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0 2022-11-08 06:28:51,075  161 28634 139738284017408
-INFO basehttp "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0 2022-11-08 06:28:51,077  161 28634 139738275624704
-INFO basehttp "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0 2022-11-08 06:28:51,099  161 28634 139738266445568
-INFO basehttp "GET /admin/django_db_logger/statuslog/ HTTP/1.1" 200 6506 2022-11-08 06:28:52,874  161 28634 139738266445568
-INFO basehttp "GET /static/admin/css/changelists.css HTTP/1.1" 304 0 2022-11-08 06:28:52,965  161 28634 139738257528576
-INFO basehttp "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0 2022-11-08 06:28:52,966  161 28634 139738249135872
-INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3195 2022-11-08 06:28:53,019  161 28634 139738266445568
-INFO basehttp "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381 2022-11-08 06:28:53,026  161 28634 139738275624704
-INFO basehttp "GET /static/admin/js/core.js HTTP/1.1" 304 0 2022-11-08 06:28:53,035  161 28634 139738249135872
-INFO basehttp "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0 2022-11-08 06:28:53,086  161 28634 139738266445568
-INFO basehttp "GET /static/admin/js/urlify.js HTTP/1.1" 304 0 2022-11-08 06:28:53,098  161 28634 139738249135872
-INFO basehttp "GET /static/admin/js/actions.js HTTP/1.1" 304 0 2022-11-08 06:28:53,111  161 28634 139738275624704
-INFO basehttp "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 287630 2022-11-08 06:28:53,113  161 28634 139738284017408
-INFO basehttp "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0 2022-11-08 06:28:53,114  161 28634 139738249135872
-INFO basehttp "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0 2022-11-08 06:28:53,182  161 28634 139738249135872
-INFO basehttp "GET /api/buses HTTP/1.1" 200 1546 2022-11-08 06:29:03,423  161 28634 139738292934400
-INFO basehttp "GET /admin/django_db_logger/statuslog/? HTTP/1.1" 200 6506 2022-11-08 06:29:10,917  161 28634 139738249135872
-INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3195 2022-11-08 06:29:10,951  161 28634 139738249135872
-INFO basehttp "GET /admin/django_db_logger/statuslog/? HTTP/1.1" 200 6506 2022-11-08 06:29:14,211  161 28634 139738249135872
-INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3195 2022-11-08 06:29:14,243  161 28634 139738249135872
-INFO basehttp "GET /admin/django_db_logger/statuslog/? HTTP/1.1" 200 6506 2022-11-08 06:29:15,001  161 28634 139738249135872
-INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3195 2022-11-08 06:29:15,034  161 28634 139738249135872
-INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 06:30:00,524  251 28634 139738503149376
-INFO autoreload Watching for file changes with StatReloader 2022-11-08 06:30:02,955  637 28876 140282360043328
-INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 06:30:07,583  251 28876 140282360043328
-INFO autoreload Watching for file changes with StatReloader 2022-11-08 06:30:08,044  637 28916 140340286605120
-INFO basehttp "GET /api/buses HTTP/1.1" 200 1546 2022-11-08 06:30:13,367  161 28916 140340069660416
-INFO basehttp "GET /admin/django_db_logger/statuslog/? HTTP/1.1" 200 6506 2022-11-08 06:30:35,396  161 28916 140340061267712
-INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3195 2022-11-08 06:30:35,485  161 28916 140340061267712
-INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/settings.py changed, reloading. 2022-11-08 06:31:27,027  251 28916 140340286605120
-INFO autoreload Watching for file changes with StatReloader 2022-11-08 06:32:28,388  637 29089 140244458264384
-INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 06:33:38,278  251 29089 140244458264384
-INFO autoreload Watching for file changes with StatReloader 2022-11-08 06:33:39,414  637 29164 140342409369408
-INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 06:33:40,767  251 29164 140342409369408
-INFO autoreload Watching for file changes with StatReloader 2022-11-08 06:33:41,318  637 29189 139631207929664
-INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 06:33:47,694  251 29189 139631207929664
-INFO autoreload Watching for file changes with StatReloader 2022-11-08 06:33:48,185  637 29222 140117746669376
-INFO basehttp "GET /api/buses HTTP/1.1" 200 1546 2022-11-08 06:33:52,504  161 29222 140117536405248
-INFO basehttp "GET /admin/django_db_logger/statuslog/? HTTP/1.1" 200 6506 2022-11-08 06:33:59,691  161 29222 140117527488256
-INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3195 2022-11-08 06:33:59,726  161 29222 140117527488256
-INFO basehttp "GET /admin/django_db_logger/statuslog/? HTTP/1.1" 200 6506 2022-11-08 06:34:02,649  161 29222 140117527488256
-INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3195 2022-11-08 06:34:02,684  161 29222 140117527488256
-INFO basehttp "GET /admin/django_db_logger/statuslog/?level__exact=20 HTTP/1.1" 200 6652 2022-11-08 06:34:05,728  161 29222 140117527488256
-INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3195 2022-11-08 06:34:05,763  161 29222 140117527488256
-INFO basehttp "GET /admin/django_db_logger/statuslog/? HTTP/1.1" 200 6506 2022-11-08 06:34:07,484  161 29222 140117527488256
-INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3195 2022-11-08 06:34:07,517  161 29222 140117527488256
-INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/settings.py changed, reloading. 2022-11-08 06:37:30,202  251 29222 140117746669376
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 09:26:26,389  637 5060 140187714185024
+INFO basehttp "GET /api/buses HTTP/1.1" 200 1546 2022-11-08 09:26:31,192  161 5060 140187571230464
+INFO basehttp "GET /admin/django_db_logger/statuslog/?all= HTTP/1.1" 200 14504 2022-11-08 09:37:49,699  161 5060 140187562313472
+INFO basehttp "GET /admin/jsi18n/ HTTP/1.1" 200 3195 2022-11-08 09:37:49,746  161 5060 140187562313472
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 09:39:35,707  637 5462 140669838137152
+INFO basehttp "GET /api/buses HTTP/1.1" 200 1546 2022-11-08 09:39:43,077  161 5462 140669695182592
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 09:40:56,678  251 5462 140669838137152
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 09:40:57,143  637 5584 140479985665856
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 09:41:01,370  251 5584 140479985665856
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 09:41:01,902  637 5616 140714658989888
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 09:41:03,229  251 5616 140714658989888
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 09:41:03,780  637 5639 140160580335424
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 09:41:07,122  251 5639 140160580335424
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 09:41:07,645  637 5658 140534503970624
+INFO basehttp "GET /api/buses HTTP/1.1" 200 1546 2022-11-08 09:41:39,728  161 5658 140534361016064
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 09:47:50,837  251 5658 140534503970624
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 09:47:51,400  637 5865 140022172755776
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 09:47:52,731  251 5865 140022172755776
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 09:47:53,238  637 5886 139852572968768
+INFO views inside bus list 2022-11-08 09:47:58,075  35 5886 139852430014208
+INFO basehttp "GET /api/buses HTTP/1.1" 200 1546 2022-11-08 09:47:58,099  161 5886 139852430014208
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 10:37:47,751  251 5886 139852572968768
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 10:37:48,458  637 7286 139978438936384
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 10:37:49,646  251 7286 139978438936384
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 10:37:50,222  637 7308 140218401134400
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 10:37:51,431  251 7308 140218401134400
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 10:37:51,938  637 7320 139977928152896
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 10:37:54,126  251 7320 139977928152896
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 10:37:54,755  637 7333 140344517588800
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 10:37:55,976  251 7333 140344517588800
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 10:37:56,481  637 7359 139981557151552
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 10:37:58,691  251 7359 139981557151552
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 10:37:59,161  637 7372 140006602114880
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 10:38:01,459  251 7372 140006602114880
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 10:38:02,126  637 7399 140366847502144
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 10:38:06,669  251 7399 140366847502144
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 10:38:07,169  637 7432 140278487852864
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 10:38:10,495  251 7432 140278487852864
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 10:38:11,013  637 7459 140117354620736
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 10:38:32,701  251 7459 140117354620736
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 10:38:33,347  637 7501 140631641765696
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 10:39:39,967  251 7501 140631641765696
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 10:39:40,778  637 7595 139756467644224
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 10:39:42,074  251 7595 139756467644224
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 10:39:42,606  637 7619 140162997057344
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 10:39:45,112  251 7619 140162997057344
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 10:39:45,631  637 7643 140641638618944
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 10:39:46,933  251 7643 140641638618944
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 10:39:47,440  637 7664 140597362304832
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-08 10:39:48,772  251 7664 140597362304832
+INFO autoreload Watching for file changes with StatReloader 2022-11-08 10:39:49,286  637 7684 140621160818496
+INFO basehttp "GET /admin/logout/ HTTP/1.1" 200 1529 2022-11-08 11:53:27,357  161 7684 140621017863936
+INFO basehttp "GET /admin/ HTTP/1.1" 302 0 2022-11-08 11:53:33,259  161 7684 140621017863936
+INFO basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2211 2022-11-08 11:53:33,398  161 7684 140621017863936
+INFO basehttp "GET /static/admin/css/login.css HTTP/1.1" 304 0 2022-11-08 11:53:33,464  161 7684 140621017863936
+INFO basehttp "GET /admin/ HTTP/1.1" 302 0 2022-11-08 11:53:34,168  161 7684 140621017863936
+INFO basehttp "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2211 2022-11-08 11:53:34,285  161 7684 140621017863936

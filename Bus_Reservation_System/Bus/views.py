@@ -13,6 +13,8 @@ from .tasks import *
 import logging
 # logger = logging.getLogger('django')
 db_logger = logging.getLogger('django')
+from datetime import datetime, timezone
+from time import strftime
 
 
 
@@ -32,6 +34,7 @@ class BusView(APIView):
             response["status"] = status.HTTP_200_OK
             response["message"] = " Buses Details fetched successfully"
             response["data"] = serializer.data
+            db_logger.info('inside bus list')
             return Response(response, status=status.HTTP_200_OK)
         except Exception:
             return Response(response, status=status.HTTP_400_BAD_REQUEST)
@@ -211,13 +214,16 @@ class BookingView(APIView):
     def post(self, request, *args, **kwargs):
         try:
             serializer = self.serializer_class(data=request.data)
-            # email=request.user.email
+            # email=request.user.emailsssssss
             bus_id = request.data["bus"]
             seats = BusList.objects.get(id=bus_id)
             bus_name = seats.bus_name
             place = seats.from_place
             to = seats.to
             date = request.data["reservation_date"]
+            # print(date)
+            # s=date.replace(tzinfo=None).strftime("%d %B %Y %I:%M %p")
+            # print(s)
             id = request.data["user"]
             user_email = User.objects.get(id=id)
             email = user_email.email

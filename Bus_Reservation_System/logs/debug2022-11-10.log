@@ -1,0 +1,560 @@
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 03:23:59,602  637 5260 140714207618880
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 03:24:21,092  251 5260 140714207618880
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 03:24:23,867  637 5309 139718477276992
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 03:24:27,613  251 5309 139718477276992
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 03:24:30,592  637 5360 139632318625600
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 03:24:35,306  251 5360 139632318625600
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 03:24:36,409  637 5414 140095591044928
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 03:24:40,863  251 5414 140095591044928
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 03:24:42,805  637 5461 140066033465152
+INFO basehttp "POST /api/login/ HTTP/1.1" 200 441 2022-11-10 03:26:29,380  161 5461 140065885067008
+WARNING log Bad Request: /api/booking/ 2022-11-10 03:26:35,679  230 5461 140065885067008
+WARNING basehttp "POST /api/booking/ HTTP/1.1" 400 49 2022-11-10 03:26:35,704  161 5461 140065885067008
+WARNING log Bad Request: /api/booking/ 2022-11-10 03:27:26,216  230 5461 140065885067008
+WARNING basehttp "POST /api/booking/ HTTP/1.1" 400 49 2022-11-10 03:27:26,225  161 5461 140065885067008
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 03:31:29,267  251 5461 140066033465152
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 03:31:31,913  637 5753 140629219436352
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 03:31:33,571  251 5753 140629219436352
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 03:31:35,853  637 5793 139801428870976
+INFO basehttp "POST /api/booking/ HTTP/1.1" 200 182 2022-11-10 03:31:54,777  161 5793 139801280472832
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 03:41:22,870  251 5793 139801428870976
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 03:41:26,860  637 6331 139911081191232
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 03:41:29,404  251 6331 139911081191232
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 03:41:29,964  637 6384 139971176261440
+ERROR log Internal Server Error: /api/booking/ 2022-11-10 04:15:01,776  230 6384 139971027863296
+Traceback (most recent call last):
+  File "/home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py", line 225, in post
+    s=date.replace(tzinfo=None).strftime("%d %B %Y %I:%M %p")
+TypeError: replace() takes no keyword arguments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py", line 252, in post
+    return Response(response, status=status.HTTP_400_BAD_REQUEST)
+UnboundLocalError: local variable 'response' referenced before assignment
+ERROR basehttp "POST /api/booking/ HTTP/1.1" 500 104738 2022-11-10 04:15:01,794  161 6384 139971027863296
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 04:15:33,128  251 6384 139971176261440
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:15:36,330  637 7590 140311685760832
+ERROR log Internal Server Error: /api/booking/ 2022-11-10 04:15:45,261  230 7590 140311537362688
+Traceback (most recent call last):
+  File "/home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py", line 225, in post
+    s=date.replace(tzinfo=None).strftime("%d %B %Y %I:%M %p")
+TypeError: replace() takes no keyword arguments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py", line 252, in post
+    return Response(response, status=status.HTTP_400_BAD_REQUEST)
+UnboundLocalError: local variable 'response' referenced before assignment
+ERROR basehttp "POST /api/booking/ HTTP/1.1" 500 104738 2022-11-10 04:15:45,282  161 7590 140311537362688
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 04:16:11,094  251 7590 140311685760832
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:16:11,609  637 7708 140212493686592
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 04:16:13,832  251 7708 140212493686592
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:16:14,507  637 7742 139875461117760
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 04:16:17,955  251 7742 139875461117760
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:16:18,630  637 7769 140099672913728
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 04:16:20,086  251 7769 140099672913728
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:16:20,598  637 7788 140172671952704
+ERROR log Internal Server Error: /api/booking/ 2022-11-10 04:19:17,722  230 7788 140172523554560
+Traceback (most recent call last):
+  File "/home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py", line 225, in post
+    s=date.replace(tzinfo=None).strftime("%d %B %Y %I:%M %p")
+TypeError: replace() takes no keyword arguments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py", line 252, in post
+    return Response(response, status=status.HTTP_400_BAD_REQUEST)
+UnboundLocalError: local variable 'response' referenced before assignment
+ERROR basehttp "POST /api/booking/ HTTP/1.1" 500 104738 2022-11-10 04:19:17,742  161 7788 140172523554560
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/settings.py changed, reloading. 2022-11-10 04:34:59,217  251 7788 140172671952704
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:34:59,948  637 8338 140050704119616
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/settings.py changed, reloading. 2022-11-10 04:35:01,333  251 8338 140050704119616
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:35:02,129  637 8374 140373004318528
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/settings.py changed, reloading. 2022-11-10 04:35:05,646  251 8374 140373004318528
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:35:06,184  637 8398 139738320226112
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/settings.py changed, reloading. 2022-11-10 04:35:37,170  251 8398 139738320226112
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:35:37,641  637 8473 140562453931840
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/settings.py changed, reloading. 2022-11-10 04:35:52,340  251 8473 140562453931840
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:35:52,833  637 8536 139997008979776
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/settings.py changed, reloading. 2022-11-10 04:35:54,279  251 8536 139997008979776
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:35:54,796  637 8561 140128302794560
+WARNING log Unauthorized: /api/booking/ 2022-11-10 04:36:01,125  230 8561 140128154396416
+WARNING basehttp "POST /api/booking/ HTTP/1.1" 401 183 2022-11-10 04:36:01,168  161 8561 140128154396416
+INFO basehttp "POST /api/login/ HTTP/1.1" 200 441 2022-11-10 04:36:05,701  161 8561 140128154396416
+ERROR log Internal Server Error: /api/booking/ 2022-11-10 04:36:10,929  230 8561 140128154396416
+Traceback (most recent call last):
+  File "/home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py", line 225, in post
+    s=date.replace(tzinfo=None).strftime("%d %B %Y %I:%M %p")
+TypeError: replace() takes no keyword arguments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/django/views/generic/base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/pearl/.local/share/virtualenvs/Bus_Reservation-8zAuI53M/lib/python3.6/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py", line 252, in post
+    return Response(response, status=status.HTTP_400_BAD_REQUEST)
+UnboundLocalError: local variable 'response' referenced before assignment
+ERROR basehttp "POST /api/booking/ HTTP/1.1" 500 104799 2022-11-10 04:36:10,951  161 8561 140128154396416
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 04:36:36,271  251 8561 140128302794560
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:36:39,306  637 8689 139952681006912
+WARNING log Bad Request: /api/booking/ 2022-11-10 04:36:50,381  230 8689 139952532608768
+WARNING basehttp "POST /api/booking/ HTTP/1.1" 400 49 2022-11-10 04:36:50,406  161 8689 139952532608768
+INFO basehttp "POST /api/booking/ HTTP/1.1" 200 185 2022-11-10 04:37:24,359  161 8689 139952532608768
+INFO basehttp "GET /api/booking/ HTTP/1.1" 200 1472 2022-11-10 04:37:55,092  161 8689 139952532608768
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 04:47:41,564  251 8689 139952681006912
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:47:42,187  637 9185 140637151094592
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 04:47:44,478  251 9185 140637151094592
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:47:45,058  637 9222 139916293453632
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 04:47:46,368  251 9222 139916293453632
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:47:46,910  637 9239 139888423405376
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 04:47:49,175  251 9239 139888423405376
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:47:49,684  637 9274 139986823464768
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 04:48:34,006  251 9274 139986823464768
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:48:34,524  637 9335 140176383362880
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 04:48:53,272  251 9335 140176383362880
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:48:53,848  637 9413 140415508756288
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 04:49:27,933  251 9413 140415508756288
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:49:28,553  637 9494 140099304474432
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 04:49:29,759  251 9494 140099304474432
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:49:30,320  637 9525 140663967860544
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 04:49:32,565  251 9525 140663967860544
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:49:33,081  637 9547 139844664604480
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 04:49:36,347  251 9547 139844664604480
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:49:36,914  637 9574 140093978879808
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 04:49:39,143  251 9574 140093978879808
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:49:39,671  637 9593 140238548305728
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 04:49:42,944  251 9593 140238548305728
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:49:43,452  637 9632 139883683030848
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 04:49:49,852  251 9632 139883683030848
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:49:50,361  637 9665 140526506305344
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 04:49:51,628  251 9665 140526506305344
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:49:52,134  637 9686 140487049320256
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 04:49:55,431  251 9686 140487049320256
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:49:55,912  637 9707 140541329880896
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 04:50:34,917  251 9707 140541329880896
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:50:36,021  637 9874 140097399916352
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 04:50:50,699  251 9874 140097399916352
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 04:50:51,231  637 9935 140671177189184
+WARNING log Bad Request: /api/booking/ 2022-11-10 05:27:14,661  230 9935 140671028791040
+WARNING basehttp "POST /api/booking/ HTTP/1.1" 400 49 2022-11-10 05:27:14,753  161 9935 140671028791040
+INFO basehttp "POST /api/booking/ HTTP/1.1" 200 185 2022-11-10 05:27:53,867  161 9935 140671028791040
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 05:57:24,589  251 9935 140671177189184
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 05:57:27,062  637 11434 140519557879616
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 05:57:33,874  251 11434 140519557879616
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 05:57:34,392  637 11491 139782350255936
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 05:57:43,740  251 11491 139782350255936
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 05:57:44,247  637 11528 139660082112320
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 05:57:54,583  251 11528 139660082112320
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 05:57:55,138  637 11578 140506355537728
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 05:57:59,508  251 11578 140506355537728
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 05:58:00,134  637 11608 139735794816832
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 05:58:01,470  251 11608 139735794816832
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 05:58:02,007  637 11627 140143938926400
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 05:58:08,443  251 11627 140143938926400
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 05:58:08,962  637 11668 140294815213376
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 05:58:15,501  251 11668 140294815213376
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 05:58:16,007  637 11702 140017074313024
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 05:58:18,352  251 11702 140017074313024
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 05:58:18,852  637 11729 139845376210752
+WARNING log Unauthorized: /api/booking/ 2022-11-10 05:58:34,600  230 11729 139845227812608
+WARNING basehttp "POST /api/booking/ HTTP/1.1" 401 183 2022-11-10 05:58:34,631  161 11729 139845227812608
+INFO basehttp "POST /api/login/ HTTP/1.1" 200 441 2022-11-10 05:58:38,794  161 11729 139845227812608
+WARNING log Bad Request: /api/booking/ 2022-11-10 05:58:41,897  230 11729 139845227812608
+WARNING basehttp "POST /api/booking/ HTTP/1.1" 400 49 2022-11-10 05:58:41,911  161 11729 139845227812608
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 05:59:25,751  251 11729 139845376210752
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 05:59:27,297  637 11853 140069011158848
+WARNING log Bad Request: /api/booking/ 2022-11-10 05:59:30,834  230 11853 140068862760704
+WARNING basehttp "POST /api/booking/ HTTP/1.1" 400 49 2022-11-10 05:59:30,852  161 11853 140068862760704
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 06:00:01,597  251 11853 140069011158848
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 06:00:02,206  637 11930 140415817389888
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 06:00:04,631  251 11930 140415817389888
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 06:00:05,116  637 11969 140373717825344
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 06:00:06,448  251 11969 140373717825344
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 06:00:06,958  637 11982 140608210900800
+WARNING log Bad Request: /api/booking/ 2022-11-10 06:00:18,898  230 11982 140608062502656
+WARNING basehttp "POST /api/booking/ HTTP/1.1" 400 49 2022-11-10 06:00:18,906  161 11982 140608062502656
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 06:06:35,028  251 11982 140608210900800
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 06:06:37,873  637 12300 140189464319808
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 06:06:39,338  251 12300 140189464319808
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 06:06:39,973  637 12336 140532867123008
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 06:06:41,624  251 12336 140532867123008
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 06:06:42,154  637 12356 139721712662336
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus/views.py changed, reloading. 2022-11-10 06:06:53,770  251 12356 139721712662336
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 06:06:54,483  637 12409 140357190637376
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 06:39:12,698  251 12409 140357190637376
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 06:39:15,549  637 13243 140193128675136
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:33:07,675  251 13243 140193128675136
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:33:12,598  637 16055 139641034868544
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:33:14,246  251 16055 139641034868544
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:33:14,741  637 16093 140368526030656
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:33:20,024  251 16093 140368526030656
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:33:20,540  637 16130 139762072291136
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:33:25,844  251 16130 139762072291136
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:33:26,336  637 16158 139957385017152
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:33:27,591  251 16158 139957385017152
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:33:28,123  637 16167 140134924052288
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:33:29,393  251 16167 140134924052288
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:33:29,943  637 16188 140666070955840
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:33:31,162  251 16188 140666070955840
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:33:31,646  637 16204 139788645340992
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:33:36,918  251 16204 139788645340992
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:33:37,664  637 16232 140462412916544
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:33:43,417  251 16232 140462412916544
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:33:44,065  637 16269 139957534799680
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:33:47,482  251 16269 139957534799680
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:33:48,009  637 16302 140539549292352
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:33:49,251  251 16302 140539549292352
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:33:49,814  637 16322 140371781818176
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:33:54,116  251 16322 140371781818176
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:33:54,618  637 16350 139675924641600
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:33:55,863  251 16350 139675924641600
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:33:56,429  637 16365 140332996937536
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:33:57,774  251 16365 140332996937536
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:33:58,242  637 16376 140466067183424
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:34:08,782  251 16376 140466067183424
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:34:09,298  637 16423 140308101269312
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:34:13,568  251 16423 140308101269312
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:34:14,173  637 16452 140324206217024
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:34:15,525  251 16452 140324206217024
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:34:16,005  637 16474 140674767103808
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:34:18,235  251 16474 140674767103808
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:34:18,746  637 16490 140510181709632
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:34:21,042  251 16490 140510181709632
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:34:21,583  637 16519 139768675055424
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:34:24,063  251 16519 139768675055424
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:34:24,579  637 16538 139872174987072
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:34:25,868  251 16538 139872174987072
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:34:26,539  637 16558 140546801108800
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:34:27,876  251 16558 140546801108800
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:34:28,409  637 16574 140344910038848
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:34:31,677  251 16574 140344910038848
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:34:32,234  637 16602 140098331178816
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:34:33,568  251 16602 140098331178816
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:34:34,037  637 16613 140574903625536
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:37:10,832  251 16613 140574903625536
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:37:13,630  637 16817 139846904391488
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:37:17,154  251 16817 139846904391488
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:37:17,640  637 16860 140398087448384
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:37:18,891  251 16860 140398087448384
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:37:19,393  637 16872 140599613974336
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:37:21,641  251 16872 140599613974336
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:37:22,372  637 16907 139731903526720
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:37:24,891  251 16907 139731903526720
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:37:25,389  637 16937 140155270158144
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/models.py changed, reloading. 2022-11-10 08:37:36,946  251 16937 140155270158144
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:37:37,451  637 16986 140672262674240
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/serializers.py changed, reloading. 2022-11-10 08:37:46,997  251 16986 140672262674240
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:37:47,489  637 17047 140088429365056
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/serializers.py changed, reloading. 2022-11-10 08:37:50,810  251 17047 140088429365056
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:37:51,346  637 17081 140608077637440
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/serializers.py changed, reloading. 2022-11-10 08:37:55,733  251 17081 140608077637440
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:37:56,257  637 17118 139652562642752
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/serializers.py changed, reloading. 2022-11-10 08:38:00,512  251 17118 139652562642752
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:38:01,007  637 17151 140042182031168
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/serializers.py changed, reloading. 2022-11-10 08:38:05,243  251 17151 140042182031168
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:38:05,761  637 17186 140546230675264
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/serializers.py changed, reloading. 2022-11-10 08:38:09,044  251 17186 140546230675264
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:38:09,568  637 17211 140381951977280
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/serializers.py changed, reloading. 2022-11-10 08:38:10,775  251 17211 140381951977280
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:38:11,303  637 17228 139684458579776
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/serializers.py changed, reloading. 2022-11-10 08:38:13,596  251 17228 139684458579776
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:38:14,149  637 17249 139731424974656
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/serializers.py changed, reloading. 2022-11-10 08:38:16,433  251 17249 139731424974656
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:38:17,004  637 17271 140505624966976
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/serializers.py changed, reloading. 2022-11-10 08:38:19,232  251 17271 140505624966976
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:38:19,775  637 17300 139978622236480
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/serializers.py changed, reloading. 2022-11-10 08:38:23,018  251 17300 139978622236480
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:38:23,589  637 17317 139652330530624
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/serializers.py changed, reloading. 2022-11-10 08:38:25,791  251 17317 139652330530624
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:38:26,318  637 17352 139673415460672
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/serializers.py changed, reloading. 2022-11-10 08:38:30,558  251 17352 139673415460672
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:38:31,063  637 17384 139963766122304
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/serializers.py changed, reloading. 2022-11-10 08:38:35,294  251 17384 139963766122304
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:38:35,840  637 17419 139764972308288
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/serializers.py changed, reloading. 2022-11-10 08:38:37,021  251 17419 139764972308288
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:38:37,525  637 17428 140461039466304
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/serializers.py changed, reloading. 2022-11-10 08:38:40,786  251 17428 140461039466304
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:38:41,342  637 17462 139799047632704
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/serializers.py changed, reloading. 2022-11-10 08:38:43,768  251 17462 139799047632704
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:38:44,295  637 17484 139964971304768
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/serializers.py changed, reloading. 2022-11-10 08:38:46,508  251 17484 139964971304768
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:38:47,040  637 17504 140401049057088
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/serializers.py changed, reloading. 2022-11-10 08:38:48,251  251 17504 140401049057088
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:38:48,757  637 17513 139922651682624
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/serializers.py changed, reloading. 2022-11-10 08:38:51,101  251 17513 139922651682624
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:38:51,600  637 17548 139772180420416
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 08:40:04,482  251 17548 139772180420416
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:40:05,138  637 17617 140008830031680
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 08:40:06,471  251 17617 140008830031680
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:40:07,008  637 17645 140688492222272
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 08:40:09,362  251 17645 140688492222272
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:40:09,852  637 17663 140381183227712
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 08:40:52,856  251 17663 140381183227712
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:40:53,339  637 17714 139700704147264
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 08:41:00,624  251 17714 139700704147264
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:41:01,127  637 17771 139685785556800
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 08:41:09,451  251 17771 139685785556800
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:41:09,964  637 17811 140426607945536
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 08:41:11,184  251 17811 140426607945536
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:41:11,690  637 17834 140711172990784
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 08:41:22,038  251 17834 140711172990784
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:41:22,588  637 17878 139667813201728
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 08:41:24,777  251 17878 139667813201728
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:41:25,456  637 17913 139800323225408
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 08:41:27,662  251 17913 139800323225408
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:41:28,217  637 17927 140670266734400
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 08:41:44,686  251 17927 140670266734400
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:41:45,238  637 17982 139871467411264
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 08:41:46,426  251 17982 139871467411264
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:41:46,955  637 18002 139918494467904
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 08:41:48,140  251 18002 139918494467904
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:41:48,728  637 18018 140237436950336
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 08:41:49,941  251 18018 140237436950336
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:41:50,439  637 18027 139820390229824
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 08:41:54,688  251 18027 139820390229824
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:41:55,236  637 18056 140490589685568
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 08:41:59,505  251 18056 140490589685568
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:42:00,173  637 18085 140652500645696
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 08:42:08,530  251 18085 140652500645696
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:42:09,027  637 18134 140075565778752
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 08:42:10,376  251 18134 140075565778752
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:42:10,851  637 18145 140354576734016
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 08:42:55,169  251 18145 140354576734016
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:42:55,804  637 18224 140300600260416
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 08:43:04,270  251 18224 140300600260416
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:43:04,858  637 18276 139790755800896
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 08:43:06,038  251 18276 139790755800896
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:43:06,621  637 18284 140628896143168
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 08:43:08,857  251 18284 140628896143168
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:43:09,438  637 18312 140059906815808
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 08:43:11,659  251 18312 140059906815808
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:43:12,155  637 18321 140533101410112
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 08:43:14,326  251 18321 140533101410112
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:43:15,026  637 18350 140052121462592
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 08:43:19,406  251 18350 140052121462592
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:43:19,963  637 18380 139668681619264
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 08:43:21,147  251 18380 139668681619264
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:43:21,654  637 18389 139773351315264
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 08:43:23,840  251 18389 139773351315264
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:43:24,368  637 18423 140445832279872
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 08:43:32,673  251 18423 140445832279872
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:43:33,191  637 18453 139684107151168
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 08:43:50,690  251 18453 139684107151168
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:43:51,212  637 18504 139758806787904
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 08:43:56,478  251 18504 139758806787904
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:43:56,993  637 18533 140308068403008
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 08:44:43,074  251 18533 140308068403008
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:44:43,563  637 18615 140188410046272
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 08:44:48,811  251 18615 140188410046272
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:44:49,362  637 18649 140006267610944
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 08:44:50,560  251 18649 140006267610944
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:44:51,075  637 18676 140231265732416
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:45:41,724  637 18804 139896673584960
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:49:01,745  637 19095 139833579251520
+INFO basehttp "POST /api/v2/employee/ HTTP/1.1" 201 63 2022-11-10 08:51:19,453  161 19095 139833430853376
+INFO basehttp "GET /api/v2/employee/ HTTP/1.1" 200 65 2022-11-10 08:51:24,062  161 19095 139833430853376
+INFO basehttp "GET /api/v2/employee/ HTTP/1.1" 200 65 2022-11-10 08:51:43,947  161 19095 139833430853376
+INFO basehttp "POST /api/v2/employee/ HTTP/1.1" 201 63 2022-11-10 08:51:49,449  161 19095 139833430853376
+INFO basehttp "GET /api/v2/employee/ HTTP/1.1" 200 129 2022-11-10 08:51:53,562  161 19095 139833430853376
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 08:57:00,996  251 19095 139833579251520
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:57:03,646  637 19364 139751333693248
+WARNING log Not Found: /api/v2/employee/1 2022-11-10 08:57:14,875  230 19364 139751118104320
+WARNING basehttp "GET /api/v2/employee/1 HTTP/1.1" 404 4419 2022-11-10 08:57:14,910  161 19364 139751118104320
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 08:57:39,373  251 19364 139751333693248
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:57:41,775  637 19493 140674060261184
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 08:57:45,622  251 19493 140674060261184
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:57:46,111  637 19550 139640558630720
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 08:57:52,569  251 19550 139640558630720
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:57:53,168  637 19584 140657019369280
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 08:57:54,541  251 19584 140657019369280
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:57:55,099  637 19608 139937036474176
+INFO basehttp "GET /api/v2/employee/1 HTTP/1.1" 200 129 2022-11-10 08:57:58,003  161 19608 139936888076032
+WARNING log Not Found: /api/v2/employee/1/ 2022-11-10 08:58:08,590  230 19608 139936888076032
+WARNING basehttp "GET /api/v2/employee/1/ HTTP/1.1" 404 4552 2022-11-10 08:58:08,639  161 19608 139936888076032
+INFO basehttp "GET /api/v2/employee/1 HTTP/1.1" 200 129 2022-11-10 08:58:23,974  161 19608 139936888076032
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 08:58:43,531  251 19608 139937036474176
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:58:45,999  637 19716 140124442691392
+INFO basehttp "GET /api/v2/employee/1 HTTP/1.1" 200 129 2022-11-10 08:58:47,919  161 19716 140124294293248
+INFO basehttp "GET /api/v2/employee/1 HTTP/1.1" 200 129 2022-11-10 08:58:54,257  161 19716 140124294293248
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 08:59:30,750  251 19716 140124442691392
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 08:59:31,305  637 19796 139796762486592
+INFO basehttp "GET /api/v2/employee/1 HTTP/1.1" 200 129 2022-11-10 08:59:40,750  161 19796 139796546905856
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 09:00:16,667  251 19796 139796762486592
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 09:00:17,229  637 19877 139930385823552
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 09:00:18,563  251 19877 139930385823552
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 09:00:19,196  637 19901 139931134318400
+INFO basehttp "GET /api/v2/employee/1 HTTP/1.1" 200 129 2022-11-10 09:00:22,048  161 19901 139930985920256
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 09:01:10,757  251 19901 139931134318400
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 09:01:11,860  637 20016 139639297607488
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 09:01:14,283  251 20016 139639297607488
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 09:01:14,789  637 20053 140453202085696
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 09:01:17,050  251 20053 140453202085696
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 09:01:17,582  637 20070 140170460657472
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 09:01:19,785  251 20070 140170460657472
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 09:01:20,321  637 20100 140432894814016
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 09:01:22,556  251 20100 140432894814016
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 09:01:23,087  637 20116 140268390528832
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 09:01:34,681  251 20116 140268390528832
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 09:01:35,170  637 20181 139813170296640
+INFO basehttp "GET /api/v2/employee/1 HTTP/1.1" 200 129 2022-11-10 09:01:41,530  161 20181 139813021898496
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 09:01:52,035  251 20181 139813170296640
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 09:01:52,527  637 20247 139792204904256
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 09:01:53,844  251 20247 139792204904256
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 09:01:54,328  637 20267 140092769589056
+INFO basehttp "GET /api/v2/employee/1 HTTP/1.1" 200 129 2022-11-10 09:01:58,903  161 20267 140092621190912
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 09:04:08,731  251 20267 140092769589056
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 09:04:09,223  637 20382 140309501843264
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 09:04:11,465  251 20382 140309501843264
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 09:04:11,978  637 20418 140487139841856
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 09:04:13,326  251 20418 140487139841856
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 09:04:13,830  637 20436 139960414746432
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 09:04:18,253  251 20436 139960414746432
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 09:04:18,788  637 20475 140314905483072
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 09:04:23,283  251 20475 140314905483072
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 09:04:23,778  637 20513 140597409478464
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 09:04:28,165  251 20513 140597409478464
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 09:04:28,668  637 20551 140519694849856
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 09:04:29,985  251 20551 140519694849856
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 09:04:30,581  637 20563 139659247769408
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 09:04:32,996  251 20563 139659247769408
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 09:04:33,465  637 20600 140663552001856
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 09:04:37,841  251 20600 140663552001856
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 09:04:38,326  637 20634 140041814173504
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 09:04:39,650  251 20634 140041814173504
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 09:04:40,139  637 20646 140483533928256
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 09:04:45,584  251 20646 140483533928256
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 09:04:46,110  637 20694 140582150264640
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 09:04:51,540  251 20694 140582150264640
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 09:04:52,082  637 20734 140308509054784
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 09:05:03,671  251 20734 140308509054784
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 09:05:04,298  637 20781 139677558855488
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 09:05:07,531  251 20781 139677558855488
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 09:05:08,027  637 20815 139754353858368
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 09:05:11,449  251 20815 139754353858368
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 09:05:12,109  637 20846 139992669816640
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/Bus_Reservation_System/urls.py changed, reloading. 2022-11-10 09:05:14,367  251 20846 139992669816640
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 09:05:14,859  637 20856 139738769217344
+INFO basehttp "GET /api/v2/employee/1 HTTP/1.1" 200 63 2022-11-10 09:05:22,405  161 20856 139738620819200
+INFO basehttp "GET /api/v2/employee/ HTTP/1.1" 200 129 2022-11-10 09:07:11,545  161 20856 139738620819200
+INFO basehttp "GET /api/v2/employee/1 HTTP/1.1" 200 63 2022-11-10 09:07:17,594  161 20856 139738620819200
+INFO basehttp "PUT /api/v2/employee/1 HTTP/1.1" 200 69 2022-11-10 09:08:12,196  161 20856 139738620819200
+INFO basehttp "GET /api/v2/employee/2 HTTP/1.1" 200 63 2022-11-10 09:08:22,795  161 20856 139738620819200
+INFO basehttp "DELETE /api/v2/employee/2 HTTP/1.1" 204 0 2022-11-10 09:08:26,869  161 20856 139738620819200
+INFO basehttp "POST /api/v2/employee/ HTTP/1.1" 201 63 2022-11-10 09:08:39,876  161 20856 139738620819200
+INFO basehttp "GET /api/v2/employee/ HTTP/1.1" 200 135 2022-11-10 09:08:44,791  161 20856 139738620819200
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 09:15:03,507  251 20856 139738769217344
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 09:15:06,159  637 21173 139955539404608
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 09:15:07,866  251 21173 139955539404608
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 09:15:08,373  637 21207 140285806036800
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 11:12:52,771  251 21207 140285806036800
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 11:12:55,696  637 23563 140227541088064
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 11:13:20,947  251 23563 140227541088064
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 11:13:21,478  637 23659 140156405602112
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 11:13:38,228  251 23659 140156405602112
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 11:13:38,755  637 23727 140063022761792
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 11:13:43,009  251 23727 140063022761792
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 11:13:43,531  637 23762 140171138000704
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 11:13:44,744  251 23762 140171138000704
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 11:13:45,315  637 23786 140104032626496
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 11:13:55,678  251 23786 140104032626496
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 11:13:56,187  637 23825 140202255550272
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 11:14:00,440  251 23825 140202255550272
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 11:14:00,948  637 23859 139774065256256
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 11:14:26,619  251 23859 139774065256256
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 11:14:27,273  637 23916 140468868237120
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 11:14:30,502  251 23916 140468868237120
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 11:14:31,030  637 23952 139883881240384
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 11:14:34,285  251 23952 139883881240384
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 11:14:34,774  637 23986 139881703704384
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 11:14:37,977  251 23986 139881703704384
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 11:14:38,486  637 23996 139742166619968
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 11:15:01,136  251 23996 139742166619968
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 11:15:02,143  637 24091 140551310489408
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 11:16:14,805  251 24091 140551310489408
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 11:16:15,319  637 24176 140294533707584
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 11:16:30,806  251 24176 140294533707584
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 11:16:31,318  637 24239 139633159436096
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 11:16:33,527  251 24239 139633159436096
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 11:16:34,008  637 24275 140492350248768
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 11:17:19,059  251 24275 140492350248768
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 11:17:19,593  637 24348 140464785176384
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 11:17:36,079  251 24348 140464785176384
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 11:17:36,664  637 24413 140700043491136
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 11:17:40,914  251 24413 140700043491136
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 11:17:41,411  637 24447 139942847395648
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 11:17:48,730  251 24447 139942847395648
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 11:17:49,253  637 24482 140150031017792
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 11:17:52,497  251 24482 140150031017792
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 11:17:53,019  637 24515 140158305888064
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 11:17:56,547  251 24515 140158305888064
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 11:17:57,038  637 24550 140254765033280
+INFO basehttp "GET /api/v2/employee/ HTTP/1.1" 200 135 2022-11-10 11:18:07,204  161 24550 140254616635136
+INFO autoreload /home/pearl/Desktop/Aiswarya/projects/Bus_Reservation/Bus_Reservation_System/demofile/views.py changed, reloading. 2022-11-10 11:39:41,586  251 24550 140254765033280
+INFO autoreload Watching for file changes with StatReloader 2022-11-10 11:39:45,444  637 25070 139653498402624
